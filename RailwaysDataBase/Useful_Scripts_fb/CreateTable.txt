@@ -1,0 +1,5 @@
+CREATE TABLE train_type
+(
+    type_name char(10) NOT NULL,
+    primary key(type_name)
+);
