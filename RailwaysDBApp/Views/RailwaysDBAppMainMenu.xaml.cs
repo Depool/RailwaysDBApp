@@ -24,10 +24,13 @@ namespace RailwaysDBApp.Views
             InitializeComponent();
         }
 
-        private void Window_Loaded(object sender, RoutedEventArgs e)
+        private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            var dataToShow = from rec in RailwaysData.sharedContext.USERS select new { rec.LOGIN, rec.PASS_WORD, rec.PERMISSION };
-            table.ItemsSource = dataToShow.ToList();
+            RailwaysDBAppSettingsWindow settings = WindowsFactory.Settings;
+            if (!settings.IsVisible)
+                settings.Show();
+            else
+                settings.Activate();
         }
     }
 }

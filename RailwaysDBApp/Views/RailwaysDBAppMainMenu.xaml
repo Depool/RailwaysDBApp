@@ -1,9 +1,21 @@
 ﻿<Window x:Class="RailwaysDBApp.Views.RailwaysDBAppMainMenu"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Main menu" Height="500" Width="700"
-        Loaded="Window_Loaded">
-    <DataGrid Name="table">
-        
-    </DataGrid>
+        Title="{Loc MainMenu_Name}" 
+        Height="500" 
+        Width="700"
+        WindowStartupLocation="CenterScreen">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition/>
+        </Grid.RowDefinitions>
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition/>
+        </Grid.ColumnDefinitions>
+        <Button Name="Settings" Width="150" Height="40" 
+                Background="Linen"
+                FontSize="16"
+                Content="{Loc MainMenu_Settings}"
+                Click="Settings_Click"/>
+    </Grid>
 </Window>

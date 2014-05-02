@@ -13,6 +13,8 @@ using System.Windows.Navigation;
 using System.Windows.Shapes;
 using RailwaysDAL;
 using RailwaysDBApp.Models;
+using RailwaysDBApp.Properties;
+using WpfLocalization;
 
 namespace RailwaysDBApp.Views
 {
@@ -30,14 +32,14 @@ namespace RailwaysDBApp.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Resources res = new Resources();
-            backgroundImage.Source = TypesConverter.BitmapToWPFBitmapSource(RailwaysDBApp.Resources.ukrzaliznytsya);
+            Properties.Resources res = new Properties.Resources();
+            backgroundImage.Source = TypesConverter.BitmapToWPFBitmapSource(Properties.Resources.ukrzaliznytsya);
         }
 
         private void go_Click(object sender, RoutedEventArgs e)
         {
             if (!model.CheckAuthorization(login.Text, password.Password))
-                loginResult.Content = "Incorrect login or password";
+                loginResult.Property(Label.ContentProperty).SetResourceValue("MainWindow_LoginFault");
             else
             {
                 WindowsFactory.MainMenu.Show();

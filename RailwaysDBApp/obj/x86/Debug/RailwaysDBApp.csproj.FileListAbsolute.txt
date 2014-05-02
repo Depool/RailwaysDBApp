@@ -12,6 +12,14 @@ C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.g.cs
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppMainWindow.baml
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppMainWindow.g.cs
-C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.Resources.resources
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppMainMenu.baml
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppMainMenu.g.cs
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\WpfLocalization.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\ru-RU\RailwaysDBApp.resources.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.Properties.Resources.ru-RU.resources
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\ru-RU\RailwaysDBApp.resources.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\uk-UA\RailwaysDBApp.resources.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.Properties.Resources.uk-UA.resources
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\uk-UA\RailwaysDBApp.resources.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.baml
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.g.cs
