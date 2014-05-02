@@ -1,0 +1,17 @@
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Release\RailwaysDBApp.exe.config
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Release\RailwaysDBApp.exe
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Release\RailwaysDBApp.pdb
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Release\RailwaysDALFirebird.dll
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.csprojResolveAssemblyReference.cache
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppMainMenu.baml
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppMainWindow.baml
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppMainMenu.g.cs
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppMainWindow.g.cs
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.g.cs
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp_MarkupCompile.cache
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.g.resources
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.Properties.Resources.resources
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.Resources.resources
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.csproj.GenerateResource.Cache
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.exe
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.pdb

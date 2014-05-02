@@ -43,6 +43,7 @@
     <Reference Include="System.Data" />
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
+    <Reference Include="System.Drawing" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -60,15 +61,31 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
-    <Page Include="RailwaysDBAppMainWindow.xaml">
+    <Compile Include="Views\WindowsFactory.cs" />
+    <Page Include="Views\RailwaysDBAppMainMenu.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RailwaysDBAppMainWindow.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
+    <Compile Include="Models\RailwaysData.cs" />
+    <Compile Include="Models\RailwaysDBAppMainWindowModel.cs" />
     <Compile Include="RailwaysDBApp.xaml.cs">
       <DependentUpon>RailwaysDBApp.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
-    <Compile Include="RailwaysDBAppMainWindow.xaml.cs">
+    <Compile Include="Resources.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+    <Compile Include="TypesConverter.cs" />
+    <Compile Include="Views\RailwaysDBAppMainMenu.xaml.cs">
+      <DependentUpon>RailwaysDBAppMainMenu.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RailwaysDBAppMainWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppMainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
@@ -91,12 +108,19 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Resources.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <None Include="App.Config" />
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
     </None>
     <AppDesigner Include="Properties\" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\ukrzaliznytsya.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
