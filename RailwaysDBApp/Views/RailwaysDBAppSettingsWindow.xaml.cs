@@ -13,6 +13,7 @@ using System.Windows.Shapes;
 using System.Globalization;
 using WpfLocalization;
 using RailwaysDBApp.Properties;
+using RailwaysDBApp.Controllers;
 
 namespace RailwaysDBApp.Views
 {
@@ -49,6 +50,7 @@ namespace RailwaysDBApp.Views
             foreach (ComboBoxItem item in comboBoxLanguage.Items)
                 if ((item.Tag as string) == Settings.Default.Localization)
                     item.IsSelected = true;
+            PermissionManager.CheckPermission(this);
         }
 
     }

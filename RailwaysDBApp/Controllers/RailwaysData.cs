@@ -4,7 +4,7 @@ using System.Linq;
 using System.Text;
 using RailwaysDAL;
 
-namespace RailwaysDBApp.Models
+namespace RailwaysDBApp.Controllers
 {
     internal static class RailwaysData
     {

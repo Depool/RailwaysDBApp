@@ -23,3 +23,4 @@ C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\uk-UA\RailwaysDBApp.resources.dll
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.baml
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.g.cs
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.baml

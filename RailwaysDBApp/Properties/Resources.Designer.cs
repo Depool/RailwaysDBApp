@@ -61,6 +61,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit DB tables.
+        /// </summary>
+        internal static string MainMenu_EditTables {
+            get {
+                return ResourceManager.GetString("MainMenu_EditTables", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Main menu.
         /// </summary>
         internal static string MainMenu_Name {
@@ -70,11 +79,38 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit races.
+        /// </summary>
+        internal static string MainMenu_Races {
+            get {
+                return ResourceManager.GetString("MainMenu_Races", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit routes.
+        /// </summary>
+        internal static string MainMenu_Routes {
+            get {
+                return ResourceManager.GetString("MainMenu_Routes", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Settings.
         /// </summary>
         internal static string MainMenu_Settings {
             get {
                 return ResourceManager.GetString("MainMenu_Settings", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Get a ticket.
+        /// </summary>
+        internal static string MainMenu_Tickets {
+            get {
+                return ResourceManager.GetString("MainMenu_Tickets", resourceCulture);
             }
         }
         
@@ -120,6 +156,16 @@ namespace RailwaysDBApp.Properties {
         internal static string MainWindow_Password {
             get {
                 return ResourceManager.GetString("MainWindow_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap rails {
+            get {
+                object obj = ResourceManager.GetObject("rails", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
             }
         }
         

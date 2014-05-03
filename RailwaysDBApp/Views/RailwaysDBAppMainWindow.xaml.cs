@@ -14,6 +14,7 @@ using System.Windows.Shapes;
 using RailwaysDAL;
 using RailwaysDBApp.Models;
 using RailwaysDBApp.Properties;
+using RailwaysDBApp.Controllers;
 using WpfLocalization;
 
 namespace RailwaysDBApp.Views
@@ -33,17 +34,27 @@ namespace RailwaysDBApp.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             Properties.Resources res = new Properties.Resources();
-            backgroundImage.Source = TypesConverter.BitmapToWPFBitmapSource(Properties.Resources.ukrzaliznytsya);
+            BackgroundImage.Source = TypesConverter.BitmapToWPFBitmapSource(Properties.Resources.ukrzaliznytsya);
+            PermissionManager.CheckPermission(this);
         }
 
         private void go_Click(object sender, RoutedEventArgs e)
         {
-            if (!model.CheckAuthorization(login.Text, password.Password))
+            object permission = model.CheckAuthorization(login.Text, password.Password);
+            if (permission == null)
                 loginResult.Property(Label.ContentProperty).SetResourceValue("MainWindow_LoginFault");
             else
             {
-                WindowsFactory.MainMenu.Show();
-                this.Close();
+                try
+                {
+                    PermissionManager.Authorized(Convert.ToInt32(permission));
+                    App.OpenWindow(WindowsFactory.MainMenu);
+                    this.Close();
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show(ex.Message);
+                }
             }
         }
 

@@ -5,7 +5,7 @@ using System.Data;
 using System.Linq;
 using System.Windows;
 using RailwaysDAL;
-using RailwaysDBApp.Models;
+using RailwaysDBApp.Controllers;
 using RailwaysDBApp.Properties;
 using System.Threading;
 using System.Globalization;
@@ -17,6 +17,8 @@ namespace RailwaysDBApp
     /// </summary>
     public partial class App : Application
     {
+
+        //private
         private void Application_LoadCompleted(object sender, System.Windows.Navigation.NavigationEventArgs e)
         {
             RailwaysEntities context = RailwaysData.sharedContext; //инициализация синглтона сущностей БД
@@ -28,6 +30,18 @@ namespace RailwaysDBApp
 
             Thread.CurrentThread.CurrentCulture = culture;
             Thread.CurrentThread.CurrentUICulture = culture;
+
+            PermissionManager.LoadPermissionList();
+        }
+
+
+        //static
+        public static void OpenWindow(Window window)
+        {
+            if (!window.IsVisible)
+                window.Show();
+            else
+                window.Activate();
         }
     }
 }

@@ -117,11 +117,23 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="MainMenu_EditTables" xml:space="preserve">
+    <value>Редагувати таблиці БД</value>
+  </data>
   <data name="MainMenu_Name" xml:space="preserve">
     <value>Головне меню</value>
   </data>
+  <data name="MainMenu_Races" xml:space="preserve">
+    <value>Редагувати рейси</value>
+  </data>
+  <data name="MainMenu_Routes" xml:space="preserve">
+    <value>Редагувати маршрути</value>
+  </data>
   <data name="MainMenu_Settings" xml:space="preserve">
     <value>Налаштування</value>
+  </data>
+  <data name="MainMenu_Tickets" xml:space="preserve">
+    <value>Одержати квиток</value>
   </data>
   <data name="MainWindow_Go" xml:space="preserve">
     <value>Вперед</value>

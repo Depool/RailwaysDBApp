@@ -64,6 +64,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\PermissionManager.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -86,7 +87,7 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </Page>
-    <Compile Include="Models\RailwaysData.cs" />
+    <Compile Include="Controllers\RailwaysData.cs" />
     <Compile Include="Models\RailwaysDBAppMainWindowModel.cs" />
     <Compile Include="RailwaysDBApp.xaml.cs">
       <DependentUpon>RailwaysDBApp.xaml</DependentUpon>
@@ -134,6 +135,9 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ukrzaliznytsya.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\rails.jpg" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
