@@ -63,6 +63,15 @@ namespace RailwaysDBApp.Properties {
         /// <summary>
         ///   Ищет локализованную строку, похожую на Edit DB tables.
         /// </summary>
+        internal static string EditDBWindow_Name {
+            get {
+                return ResourceManager.GetString("EditDBWindow_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Edit DB tables.
+        /// </summary>
         internal static string MainMenu_EditTables {
             get {
                 return ResourceManager.GetString("MainMenu_EditTables", resourceCulture);

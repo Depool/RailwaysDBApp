@@ -44,5 +44,15 @@ namespace RailwaysDBApp
             }
             return hash;
         }
+
+        public static object CreateGenericList(Type typeX) 
+        { 
+            Type listType = typeof(List<>); 
+            Type[] typeArgs = {typeX}; 
+            Type genericType = listType.MakeGenericType(typeArgs); 
+            object o = Activator.CreateInstance(genericType); 
+            return o;
+        }
+
     }
 }

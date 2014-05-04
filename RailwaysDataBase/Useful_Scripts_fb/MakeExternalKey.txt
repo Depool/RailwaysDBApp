@@ -1,0 +1,1 @@
+alter table TB2 add foreign key (IDTB2) references IDTB1 (ID1) on delete cascade on update cascade

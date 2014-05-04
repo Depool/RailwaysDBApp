@@ -9,6 +9,7 @@ namespace RailwaysDBApp.Views
     {
         private static RailwaysDBAppMainMenu mainMenu = null;
         private static RailwaysDBAppSettingsWindow settings = null;
+        private static RailwaysDBAppEditDBWindow editDB = null;
 
         public static RailwaysDBAppMainMenu MainMenu
         {
@@ -27,6 +28,16 @@ namespace RailwaysDBApp.Views
                 if (settings == null || !settings.IsVisible)
                     settings = new RailwaysDBAppSettingsWindow();
                 return settings;
+            }
+        }
+
+        public static RailwaysDBAppEditDBWindow EditDB
+        {
+            get
+            {
+                if (editDB == null || !editDB.IsVisible)
+                    editDB = new RailwaysDBAppEditDBWindow();
+                return editDB;
             }
         }
     }

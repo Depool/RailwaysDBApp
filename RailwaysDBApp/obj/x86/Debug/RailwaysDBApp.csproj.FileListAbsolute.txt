@@ -1,6 +1,5 @@
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\RailwaysDBApp.exe
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\RailwaysDBApp.pdb
-C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\RailwaysDALFirebird.dll
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.csprojResolveAssemblyReference.cache
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp_MarkupCompile.cache
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.g.resources
@@ -24,3 +23,6 @@ C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.baml
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppSettingsWindow.g.cs
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\RailwaysDBApp.baml
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppEditDBWindow.baml
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppEditDBWindow.g.cs
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\RailwaysDAL.dll

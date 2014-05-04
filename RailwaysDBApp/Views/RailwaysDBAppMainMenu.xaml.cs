@@ -27,8 +27,7 @@ namespace RailwaysDBApp.Views
 
         private void Settings_Click(object sender, RoutedEventArgs e)
         {
-            RailwaysDBAppSettingsWindow settings = WindowsFactory.Settings;
-            App.OpenWindow(settings);
+            App.OpenWindow(WindowsFactory.Settings);
         }
 
         private void Tickets_Click(object sender, RoutedEventArgs e)
@@ -48,7 +47,7 @@ namespace RailwaysDBApp.Views
 
         private void EditTables_Click(object sender, RoutedEventArgs e)
         {
-
+            App.OpenWindow(WindowsFactory.EditDB);
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
