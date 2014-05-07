@@ -29,6 +29,22 @@ namespace RailwaysDBApp.Models
                 return result[0];
         }
 
+        public static List<string> GetNamesOfDomainsInTable(string table)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<string> result = new List<string>();
+            try
+            {
+                string query = String.Format("select RDB$FIELD_NAME from RDB$RELATION_FIELDS where (RDB$RELATION_NAME = '{0}')", table);
+                result = context.ExecuteStoreQuery<string>(query).ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
+            return result;
+        }
+
         public static List<string> GetUserTablesNames()
         {
             List<string> tables = null;

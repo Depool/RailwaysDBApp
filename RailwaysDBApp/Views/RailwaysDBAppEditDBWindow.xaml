@@ -4,20 +4,32 @@
         Title="{Loc EditDBWindow_Name}" 
         MinHeight="500" Height="500"
         MinWidth="800"  Width="800"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded"
+        KeyDown="Window_KeyDown">
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
                 <RowDefinition Height="25" />
-                <RowDefinition Height="337" />
-                <RowDefinition Height="99" />
+                <RowDefinition Height="386" />
+                <RowDefinition Height="50*" />
             </Grid.RowDefinitions>
             <Grid.ColumnDefinitions>
                 <ColumnDefinition/>
             </Grid.ColumnDefinitions>
-            <DataGrid Name ="DataTable" Grid.Row="1" Grid.Column="0"/>
+            <DataGrid Name ="DataTab" Grid.Row="1" 
+                      SelectionChanged="DataTab_SelectionChanged"
+                      BeginningEdit="DataTab_BeginningEdit"
+                      RowEditEnding="DataTab_RowEditEnding"
+                      
+                      CanUserDeleteRows="True"
+                      CanUserReorderColumns="False"/>
             <ComboBox Name ="TablesComboBox" Grid.Row="0" Grid.Column="0"
-                      SelectionChanged="TablesComboBox_SelectionChanged"/>
+                      SelectionChanged="TablesComboBox_SelectionChanged"
+                      />
+            <Label Name="DeleteItems"
+                   Content="To delete records select them and press delete"
+                   Grid.Row="3"
+                   HorizontalAlignment="Center"/>
         </Grid>
     </Grid>
 </Window>

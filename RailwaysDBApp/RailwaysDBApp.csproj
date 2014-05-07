@@ -65,6 +65,8 @@
       <SubType>Designer</SubType>
     </ApplicationDefinition>
     <Compile Include="Controllers\PermissionManager.cs" />
+    <Compile Include="GraphicalConstants.cs" />
+    <Compile Include="Models\RailwaysDBAppEditRecordsModel.cs" />
     <Compile Include="Models\RailwaysDBQueries.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
       <AutoGen>True</AutoGen>
@@ -79,11 +81,18 @@
     <Compile Include="Views\RailwaysDBAppEditDBWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppEditDBWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RailwaysDBAppEditRecords.xaml.cs">
+      <DependentUpon>RailwaysDBAppEditRecords.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RailwaysDBAppSettingsWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppSettingsWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\WindowsFactory.cs" />
     <Page Include="Views\RailwaysDBAppEditDBWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RailwaysDBAppEditRecords.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

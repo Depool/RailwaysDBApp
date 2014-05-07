@@ -29,9 +29,15 @@ namespace RailwaysDBApp.Views
     /// </summary>
     public partial class RailwaysDBAppEditDBWindow : Window
     {
+        private Type editingType;
+        private string curTableName;
+        private bool isDataTabEditing;
+
         public RailwaysDBAppEditDBWindow()
         {
             InitializeComponent();
+            isDataTabEditing = false;
+            DataTab.PreviewKeyDown += DT_PreviewKeyDown; 
         }
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
@@ -40,10 +46,14 @@ namespace RailwaysDBApp.Views
             if (tables != null)
                 foreach (string name in tables)
                 {
-                    ComboBoxItem item = new ComboBoxItem();
-                    item.Content = name;
-                    item.Tag = name;
-                    TablesComboBox.Items.Add(item);
+                    string nname = name.Replace(" ", string.Empty);
+                    if (nname != "USERS")
+                    {
+                        ComboBoxItem item = new ComboBoxItem();
+                        item.Content = nname;
+                        item.Tag = nname;
+                        TablesComboBox.Items.Add(item);
+                    }
                 };
         }
 
@@ -52,34 +62,120 @@ namespace RailwaysDBApp.Views
             var selectedItem = TablesComboBox.SelectedItem as ComboBoxItem;
             RailwaysEntities context = RailwaysData.sharedContext;
             string tableName = selectedItem.Tag as string;
+
             if (tableName!= null)
             {
-                tableName = tableName.Replace(" ", string.Empty);
+                curTableName = tableName;
+                editingType = context.GetType().GetProperty(tableName).PropertyType.GetGenericArguments()[0];
                 dynamic query = context.GetType().GetProperty(tableName).GetValue(context, null);
-                DataTable.ItemsSource = null;
-                object collection = null;
+                DataTab.ItemsSource = null;
+                object collection = TypesConverter.CreateGenericList(editingType);
+
+                MethodInfo mListAdd = collection.GetType().GetMethod("Add");
                 foreach (dynamic q in query)
                 {
-                    collection = TypesConverter.CreateGenericList(q.GetType());
-                    break;
+                     mListAdd.Invoke(collection, new object[] { q });
                 }
 
-                if (collection != null)
+                
+                DataTab.ItemsSource = (IEnumerable)collection;
+                DataTab.DataContext = context.GetType().GetProperty(tableName).GetValue(context, null);
+
+                int numberOfDomains = RailwaysDBQueries.GetNumberOfDomainsInTable(tableName);
+                    
+                for (int i = DataTab.Columns.Count - 1; i >= numberOfDomains; --i)
+                         DataTab.Columns.RemoveAt(i);
+              }
+          }
+
+        private void DataTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
+        {
+            DeleteItems.IsEnabled = DataTab.SelectedItems.Count > 0;
+        }
+
+        private void DeleteItems_Click(object sender, RoutedEventArgs e)
+        {
+            DeleteItems.IsEnabled = false;
+            removeRecords();
+        }
+
+        private void Window_KeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete)
+                DeleteItems_Click(sender, new RoutedEventArgs());
+        }
+
+        private void removeRecords()
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
+
+            MethodInfo mListDelete = entities.GetType().GetMethod("DeleteObject");
+            for (int i = DataTab.SelectedItems.Count - 1; i >= 0; --i)
+            {
+                object row = DataTab.SelectedItems[i];
+                try
                 {
-                    MethodInfo mListAdd = collection.GetType().GetMethod("Add");
-                    foreach (dynamic q in query)
-                    {
-                        mListAdd.Invoke(collection, new object[] { q });
-                    }
-
-                    DataTable.ItemsSource = (IEnumerable)collection;
-                    int numberOfDomains = RailwaysDBQueries.GetNumberOfDomainsInTable(tableName);
-
-                    for (int i = DataTable.Columns.Count - 1; i >= numberOfDomains; --i)
-                         DataTable.Columns.RemoveAt(i);
-
+                    mListDelete.Invoke(entities, new object[] { row });
                 }
+                catch { };
+            }
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException == null)
+                    MessageBox.Show(ex.Message);
+                else
+                    MessageBox.Show(ex.InnerException.Message);
             }
         }
-    }
+
+        private void DT_PreviewKeyDown(object sender, KeyEventArgs e)
+        {
+            if (e.Key == Key.Delete && !isDataTabEditing)
+            {
+                removeRecords();
+            }
+                    
+        }
+
+        private void DataTab_BeginningEdit(object sender, DataGridBeginningEditEventArgs e)
+        {
+            isDataTabEditing = true;
+            DeleteItems.IsEnabled = false;
+        }
+
+        private void DataTab_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
+        {
+            isDataTabEditing = DataTab.SelectedItems.Count > 0;
+            DeleteItems.IsEnabled = isDataTabEditing;
+        }
+
+        private void DataTab_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            try
+            {
+                object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
+                MethodInfo mListAdd = entities.GetType().GetMethod("AddObject");
+                mListAdd.Invoke(entities, new object[] { e.Row.DataContext });
+            }
+            catch { }
+           
+            try
+            {
+                context.SaveChanges();
+            }
+            catch (Exception ex)
+            {
+                if (ex.InnerException == null)
+                    MessageBox.Show(ex.Message);
+                else
+                    MessageBox.Show(ex.InnerException.Message);
+            }
+        }
+     }
 }
