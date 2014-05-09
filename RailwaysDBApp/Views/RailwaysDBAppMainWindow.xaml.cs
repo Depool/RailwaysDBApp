@@ -33,7 +33,6 @@ namespace RailwaysDBApp.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            Properties.Resources res = new Properties.Resources();
             BackgroundImage.Source = TypesConverter.BitmapToWPFBitmapSource(Properties.Resources.ukrzaliznytsya);
             PermissionManager.CheckPermission(this);
         }

@@ -117,6 +117,51 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="CARRIAGES" xml:space="preserve">
+    <value>О вагонах поездов</value>
+  </data>
+  <data name="CARRIAGES_AMOUNT" xml:space="preserve">
+    <value>Количество в данном поезде</value>
+  </data>
+  <data name="CARRIAGES_CARRIAGE_TYPE_ID" xml:space="preserve">
+    <value>Номер типа вагона</value>
+  </data>
+  <data name="CARRIAGES_ID" xml:space="preserve">
+    <value>Номер записи</value>
+  </data>
+  <data name="CARRIAGES_TRAIN_ID" xml:space="preserve">
+    <value>Номер поезда</value>
+  </data>
+  <data name="CARRIAGE_TYPE" xml:space="preserve">
+    <value>Типы вагонов</value>
+  </data>
+  <data name="CARRIAGE_TYPE_ID" xml:space="preserve">
+    <value>Номер типа вагона</value>
+  </data>
+  <data name="CARRIAGE_TYPE_NAME" xml:space="preserve">
+    <value>Имя типа вагона</value>
+  </data>
+  <data name="CARRIAGE_TYPE_PLACES" xml:space="preserve">
+    <value>Количество мест</value>
+  </data>
+  <data name="CARRIAGE_TYPE_PRICE_MULTIPLIER" xml:space="preserve">
+    <value>Множитель стоимости</value>
+  </data>
+  <data name="EDGES" xml:space="preserve">
+    <value>Железнодорожные соединения станций</value>
+  </data>
+  <data name="EDGES_FIN_ID" xml:space="preserve">
+    <value>Номер конечной станции</value>
+  </data>
+  <data name="EDGES_ID" xml:space="preserve">
+    <value>Номер соединения</value>
+  </data>
+  <data name="EDGES_PASS_TIME" xml:space="preserve">
+    <value>Время проезда</value>
+  </data>
+  <data name="EDGES_START_ID" xml:space="preserve">
+    <value>Номер начальной станции</value>
+  </data>
   <data name="EditDBWindow_Name" xml:space="preserve">
     <value>Редактирование таблиц БД</value>
   </data>
@@ -153,10 +198,94 @@
   <data name="MainWindow_Password" xml:space="preserve">
     <value>Пароль:</value>
   </data>
+  <data name="RACES" xml:space="preserve">
+    <value>Рейсы поездов</value>
+  </data>
+  <data name="RACES_ID" xml:space="preserve">
+    <value>Номер рейса</value>
+  </data>
+  <data name="RACES_START_TIME" xml:space="preserve">
+    <value>Дата и время отправления</value>
+  </data>
+  <data name="RACES_TRAIN_ID" xml:space="preserve">
+    <value>Номер поезда</value>
+  </data>
   <data name="Settings_Language" xml:space="preserve">
     <value>Язык:</value>
   </data>
   <data name="Settings_Name" xml:space="preserve">
     <value>Настройки</value>
+  </data>
+  <data name="STATIONS" xml:space="preserve">
+    <value>Станции</value>
+  </data>
+  <data name="STATIONS_ID" xml:space="preserve">
+    <value>Номер станции</value>
+  </data>
+  <data name="STATIONS_NAME" xml:space="preserve">
+    <value>Имя станции</value>
+  </data>
+  <data name="STOPS" xml:space="preserve">
+    <value>Остановки</value>
+  </data>
+  <data name="STOPS_ID" xml:space="preserve">
+    <value>Номер записи</value>
+  </data>
+  <data name="STOPS_PAUSE_TIME" xml:space="preserve">
+    <value>Время остановки</value>
+  </data>
+  <data name="STOPS_STATION_ID" xml:space="preserve">
+    <value>Номер станции</value>
+  </data>
+  <data name="STOPS_STOP_NUMBER" xml:space="preserve">
+    <value>Номер по пути следования поезда</value>
+  </data>
+  <data name="STOPS_TRAIN_ID" xml:space="preserve">
+    <value>Номер поезда</value>
+  </data>
+  <data name="TICKETS" xml:space="preserve">
+    <value>Проданные билеты</value>
+  </data>
+  <data name="TICKETS_CARRIAGE_NUMBER" xml:space="preserve">
+    <value>Вагон</value>
+  </data>
+  <data name="TICKETS_FIN_STATION_NUMBER" xml:space="preserve">
+    <value>Номер станции высадки</value>
+  </data>
+  <data name="TICKETS_ID" xml:space="preserve">
+    <value>Номер билета</value>
+  </data>
+  <data name="TICKETS_PLACE_NUMBER" xml:space="preserve">
+    <value>Место</value>
+  </data>
+  <data name="TICKETS_RACE_ID" xml:space="preserve">
+    <value>Номер рейса</value>
+  </data>
+  <data name="TICKETS_START_STATION_NUMBER" xml:space="preserve">
+    <value>Номер станции посадки</value>
+  </data>
+  <data name="TRAINS" xml:space="preserve">
+    <value>Составы</value>
+  </data>
+  <data name="TRAINS_ID" xml:space="preserve">
+    <value>Номер поезда</value>
+  </data>
+  <data name="TRAINS_TRAIN_TYPE_ID" xml:space="preserve">
+    <value>Номер типа поезда</value>
+  </data>
+  <data name="TRAIN_TYPE" xml:space="preserve">
+    <value>Типы составов</value>
+  </data>
+  <data name="TRAIN_TYPE_ID" xml:space="preserve">
+    <value>Номер типа поезда</value>
+  </data>
+  <data name="TRAIN_TYPE_NAME" xml:space="preserve">
+    <value>Имя типа поезда</value>
+  </data>
+  <data name="TRAIN_TYPE_PRICE_MULTIPLIER" xml:space="preserve">
+    <value>Множитель стоимости</value>
+  </data>
+  <data name="TRAIN_TYPE_SPEED_MULTIPLIER" xml:space="preserve">
+    <value>Множитель скорости</value>
   </data>
 </root>

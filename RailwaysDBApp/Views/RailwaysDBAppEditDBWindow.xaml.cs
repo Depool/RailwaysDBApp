@@ -32,6 +32,8 @@ namespace RailwaysDBApp.Views
         private Type editingType;
         private string curTableName;
         private bool isDataTabEditing;
+        private List<string> columnsOriginalHeaders = new List<string>();
+        private int generatorValueForCurTable = 0;
 
         public RailwaysDBAppEditDBWindow()
         {
@@ -43,14 +45,15 @@ namespace RailwaysDBApp.Views
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
             List<string> tables = RailwaysDBQueries.GetUserTablesNames();
+
             if (tables != null)
                 foreach (string name in tables)
                 {
                     string nname = name.Replace(" ", string.Empty);
-                    if (nname != "USERS")
+                    if (nname != "USERS" && nname != "PERMISSION_TYPE")
                     {
                         ComboBoxItem item = new ComboBoxItem();
-                        item.Content = nname;
+                        item.Content = TypesConverter.GetResource(nname);
                         item.Tag = nname;
                         TablesComboBox.Items.Add(item);
                     }
@@ -71,12 +74,19 @@ namespace RailwaysDBApp.Views
                 DataTab.ItemsSource = null;
                 object collection = TypesConverter.CreateGenericList(editingType);
 
+                generatorValueForCurTable = 0;
                 MethodInfo mListAdd = collection.GetType().GetMethod("Add");
                 foreach (dynamic q in query)
                 {
+                     try
+                     {
+                         int id = (int)context.GetType().GetProperty(tableName).PropertyType.GetGenericArguments()[0].GetProperty("ID").GetValue(q, null);
+                         if (id > generatorValueForCurTable)
+                             generatorValueForCurTable = id;
+                     }
+                     catch{}
                      mListAdd.Invoke(collection, new object[] { q });
                 }
-
                 
                 DataTab.ItemsSource = (IEnumerable)collection;
                 DataTab.DataContext = context.GetType().GetProperty(tableName).GetValue(context, null);
@@ -85,7 +95,18 @@ namespace RailwaysDBApp.Views
                     
                 for (int i = DataTab.Columns.Count - 1; i >= numberOfDomains; --i)
                          DataTab.Columns.RemoveAt(i);
+                for (int i = DataTab.Columns.Count - 1;i >= 0; --i)
+                    if ((DataTab.Columns[i].Header as string) == "ID")
+                        DataTab.Columns.RemoveAt(i);
+
+                columnsOriginalHeaders.Clear();
+                foreach (DataGridColumn column in DataTab.Columns)
+                {
+                     columnsOriginalHeaders.Add((string)column.Header);
+                     column.Header = TypesConverter.GetResource(curTableName + "_" + (column.Header as string));
+                }
               }
+              
           }
 
         private void DataTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -150,7 +171,16 @@ namespace RailwaysDBApp.Views
 
         private void DataTab_CellEditEnding(object sender, DataGridCellEditEndingEventArgs e)
         {
-            isDataTabEditing = DataTab.SelectedItems.Count > 0;
+            TextBox t = e.EditingElement as TextBox;
+            string newValue = t.Text;
+            object entity = e.Row.DataContext;
+
+            Type convertToType = entity.GetType().GetProperty(columnsOriginalHeaders[e.Column.DisplayIndex]).PropertyType;
+            TypeConverter tc = TypeDescriptor.GetConverter(convertToType);
+            object castedValue = tc.ConvertFromString(newValue);
+
+            entity.GetType().GetProperty(columnsOriginalHeaders[e.Column.DisplayIndex]).SetValue(entity, castedValue, null);
+            isDataTabEditing = false;
             DeleteItems.IsEnabled = isDataTabEditing;
         }
 
@@ -160,14 +190,24 @@ namespace RailwaysDBApp.Views
             try
             {
                 object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
+                object dataContext = e.Row.DataContext;
+                try{
+                    int isNewId = (int)dataContext.GetType().GetProperty("ID").GetValue(dataContext, null);
+                    //0 - значение id вместо null. Все валиные id в базе > 0
+                    if (isNewId == 0)
+                        dataContext.GetType().GetProperty("ID").SetValue(dataContext, ++generatorValueForCurTable, null);
+                }
+                catch{}
+
                 MethodInfo mListAdd = entities.GetType().GetMethod("AddObject");
-                mListAdd.Invoke(entities, new object[] { e.Row.DataContext });
+                mListAdd.Invoke(entities, new object[] { dataContext });
             }
             catch { }
            
             try
             {
                 context.SaveChanges();
+                context.AcceptAllChanges();
             }
             catch (Exception ex)
             {
@@ -175,6 +215,18 @@ namespace RailwaysDBApp.Views
                     MessageBox.Show(ex.Message);
                 else
                     MessageBox.Show(ex.InnerException.Message);
+            }
+        }
+
+        private void Window_Closing(object sender, CancelEventArgs e)
+        {
+            try
+            {
+                RailwaysData.sharedContext.SaveChanges();
+            }
+            catch
+            {
+
             }
         }
      }

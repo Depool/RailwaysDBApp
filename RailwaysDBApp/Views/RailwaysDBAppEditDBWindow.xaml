@@ -5,7 +5,9 @@
         MinHeight="500" Height="500"
         MinWidth="800"  Width="800"
         Loaded="Window_Loaded"
-        KeyDown="Window_KeyDown">
+        KeyDown="Window_KeyDown"
+        Closing="Window_Closing"
+        >
     <Grid>
         <Grid>
             <Grid.RowDefinitions>
@@ -19,8 +21,8 @@
             <DataGrid Name ="DataTab" Grid.Row="1" 
                       SelectionChanged="DataTab_SelectionChanged"
                       BeginningEdit="DataTab_BeginningEdit"
+                      CellEditEnding="DataTab_CellEditEnding"
                       RowEditEnding="DataTab_RowEditEnding"
-                      
                       CanUserDeleteRows="True"
                       CanUserReorderColumns="False"/>
             <ComboBox Name ="TablesComboBox" Grid.Row="0" Grid.Column="0"

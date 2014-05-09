@@ -166,4 +166,133 @@
   <data name="EditDBWindow_Name" xml:space="preserve">
     <value>Edit DB tables</value>
   </data>
+  <data name="CARRIAGES" xml:space="preserve">
+    <value>Carriages</value>
+  </data>
+  <data name="CARRIAGE_TYPE" xml:space="preserve">
+    <value>Types of carriages</value>
+  </data>
+  <data name="EDGES" xml:space="preserve">
+    <value>Railroad connections</value>
+  </data>
+  <data name="RACES" xml:space="preserve">
+    <value>Races of trains</value>
+  </data>
+  <data name="STATIONS" xml:space="preserve">
+    <value>Stations</value>
+  </data>
+  <data name="STOPS" xml:space="preserve">
+    <value>Stops</value>
+  </data>
+  <data name="TICKETS" xml:space="preserve">
+    <value>Sold tickets</value>
+  </data>
+  <data name="TRAINS" xml:space="preserve">
+    <value>Trains</value>
+  </data>
+  <data name="TRAIN_TYPE" xml:space="preserve">
+    <value>Types of trains</value>
+  </data>
+  <data name="CARRIAGES_AMOUNT" xml:space="preserve">
+    <value>Amount included into train</value>
+  </data>
+  <data name="CARRIAGES_CARRIAGE_TYPE_ID" xml:space="preserve">
+    <value>Id of the type of the carriage</value>
+  </data>
+  <data name="CARRIAGES_ID" xml:space="preserve">
+    <value>Carriage id</value>
+  </data>
+  <data name="CARRIAGES_TRAIN_ID" xml:space="preserve">
+    <value>Id of corresponding train</value>
+  </data>
+  <data name="CARRIAGE_TYPE_ID" xml:space="preserve">
+    <value>Id of the carriage type</value>
+  </data>
+  <data name="CARRIAGE_TYPE_NAME" xml:space="preserve">
+    <value>Name of the carriage type</value>
+  </data>
+  <data name="CARRIAGE_TYPE_PLACES" xml:space="preserve">
+    <value>Number of places</value>
+  </data>
+  <data name="CARRIAGE_TYPE_PRICE_MULTIPLIER" xml:space="preserve">
+    <value>Price multiplier</value>
+  </data>
+  <data name="EDGES_FIN_ID" xml:space="preserve">
+    <value>Id of finishing station</value>
+  </data>
+  <data name="EDGES_ID" xml:space="preserve">
+    <value>Id of the edge</value>
+  </data>
+  <data name="EDGES_PASS_TIME" xml:space="preserve">
+    <value>Time needed to pass</value>
+  </data>
+  <data name="EDGES_START_ID" xml:space="preserve">
+    <value>Id of starting station</value>
+  </data>
+  <data name="RACES_ID" xml:space="preserve">
+    <value>Id of the race</value>
+  </data>
+  <data name="RACES_START_TIME" xml:space="preserve">
+    <value>Date and time of departure</value>
+  </data>
+  <data name="RACES_TRAIN_ID" xml:space="preserve">
+    <value>Id of the train of the race</value>
+  </data>
+  <data name="STATIONS_ID" xml:space="preserve">
+    <value>Id of the station</value>
+  </data>
+  <data name="STATIONS_NAME" xml:space="preserve">
+    <value>Name of the station</value>
+  </data>
+  <data name="STOPS_ID" xml:space="preserve">
+    <value>Id of the stop</value>
+  </data>
+  <data name="STOPS_PAUSE_TIME" xml:space="preserve">
+    <value>Pause time</value>
+  </data>
+  <data name="STOPS_STATION_ID" xml:space="preserve">
+    <value>Station id</value>
+  </data>
+  <data name="STOPS_STOP_NUMBER" xml:space="preserve">
+    <value>Number of the stop for train</value>
+  </data>
+  <data name="STOPS_TRAIN_ID" xml:space="preserve">
+    <value>Train id</value>
+  </data>
+  <data name="TICKETS_CARRIAGE_NUMBER" xml:space="preserve">
+    <value>Carriage</value>
+  </data>
+  <data name="TICKETS_FIN_STATION_NUMBER" xml:space="preserve">
+    <value>Number of unboarding station</value>
+  </data>
+  <data name="TICKETS_ID" xml:space="preserve">
+    <value>Ticket id</value>
+  </data>
+  <data name="TICKETS_PLACE_NUMBER" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="TICKETS_RACE_ID" xml:space="preserve">
+    <value>Race id</value>
+  </data>
+  <data name="TICKETS_START_STATION_NUMBER" xml:space="preserve">
+    <value>Number of boarding station</value>
+  </data>
+  <data name="TRAINS_ID" xml:space="preserve">
+    <value>Train id</value>
+  </data>
+  <data name="TRAINS_TRAIN_TYPE_ID" xml:space="preserve">
+    <value>Train type id</value>
+  </data>
+  <data name="TRAIN_TYPE_ID" xml:space="preserve">
+    <value>Train type id</value>
+  </data>
+  <data name="TRAIN_TYPE_NAME" xml:space="preserve">
+    <value>Train type name</value>
+  </data>
+  <data name="TRAIN_TYPE_PRICE_MULTIPLIER" xml:space="preserve">
+    <value>Price multiplier</value>
+  </data>
+  <data name="TRAIN_TYPE_SPEED_MULTIPLIER" xml:space="preserve">
+    <value>Speed multiplier</value>
+  </data>
 </root>

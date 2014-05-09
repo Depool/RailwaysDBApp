@@ -61,6 +61,141 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Types of carriages.
+        /// </summary>
+        internal static string CARRIAGE_TYPE {
+            get {
+                return ResourceManager.GetString("CARRIAGE_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the carriage type.
+        /// </summary>
+        internal static string CARRIAGE_TYPE_ID {
+            get {
+                return ResourceManager.GetString("CARRIAGE_TYPE_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name of the carriage type.
+        /// </summary>
+        internal static string CARRIAGE_TYPE_NAME {
+            get {
+                return ResourceManager.GetString("CARRIAGE_TYPE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of places.
+        /// </summary>
+        internal static string CARRIAGE_TYPE_PLACES {
+            get {
+                return ResourceManager.GetString("CARRIAGE_TYPE_PLACES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Price multiplier.
+        /// </summary>
+        internal static string CARRIAGE_TYPE_PRICE_MULTIPLIER {
+            get {
+                return ResourceManager.GetString("CARRIAGE_TYPE_PRICE_MULTIPLIER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriages.
+        /// </summary>
+        internal static string CARRIAGES {
+            get {
+                return ResourceManager.GetString("CARRIAGES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Amount included into train.
+        /// </summary>
+        internal static string CARRIAGES_AMOUNT {
+            get {
+                return ResourceManager.GetString("CARRIAGES_AMOUNT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the type of the carriage.
+        /// </summary>
+        internal static string CARRIAGES_CARRIAGE_TYPE_ID {
+            get {
+                return ResourceManager.GetString("CARRIAGES_CARRIAGE_TYPE_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage id.
+        /// </summary>
+        internal static string CARRIAGES_ID {
+            get {
+                return ResourceManager.GetString("CARRIAGES_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of corresponding train.
+        /// </summary>
+        internal static string CARRIAGES_TRAIN_ID {
+            get {
+                return ResourceManager.GetString("CARRIAGES_TRAIN_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Railroad connections.
+        /// </summary>
+        internal static string EDGES {
+            get {
+                return ResourceManager.GetString("EDGES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of finishing station.
+        /// </summary>
+        internal static string EDGES_FIN_ID {
+            get {
+                return ResourceManager.GetString("EDGES_FIN_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the edge.
+        /// </summary>
+        internal static string EDGES_ID {
+            get {
+                return ResourceManager.GetString("EDGES_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Time needed to pass.
+        /// </summary>
+        internal static string EDGES_PASS_TIME {
+            get {
+                return ResourceManager.GetString("EDGES_PASS_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of starting station.
+        /// </summary>
+        internal static string EDGES_START_ID {
+            get {
+                return ResourceManager.GetString("EDGES_START_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Edit DB tables.
         /// </summary>
         internal static string EditDBWindow_Name {
@@ -169,6 +304,42 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Races of trains.
+        /// </summary>
+        internal static string RACES {
+            get {
+                return ResourceManager.GetString("RACES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the race.
+        /// </summary>
+        internal static string RACES_ID {
+            get {
+                return ResourceManager.GetString("RACES_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date and time of departure.
+        /// </summary>
+        internal static string RACES_START_TIME {
+            get {
+                return ResourceManager.GetString("RACES_START_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the train of the race.
+        /// </summary>
+        internal static string RACES_TRAIN_ID {
+            get {
+                return ResourceManager.GetString("RACES_TRAIN_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
         /// </summary>
         internal static System.Drawing.Bitmap rails {
@@ -193,6 +364,222 @@ namespace RailwaysDBApp.Properties {
         internal static string Settings_Name {
             get {
                 return ResourceManager.GetString("Settings_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stations.
+        /// </summary>
+        internal static string STATIONS {
+            get {
+                return ResourceManager.GetString("STATIONS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the station.
+        /// </summary>
+        internal static string STATIONS_ID {
+            get {
+                return ResourceManager.GetString("STATIONS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Name of the station.
+        /// </summary>
+        internal static string STATIONS_NAME {
+            get {
+                return ResourceManager.GetString("STATIONS_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stops.
+        /// </summary>
+        internal static string STOPS {
+            get {
+                return ResourceManager.GetString("STOPS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of the stop.
+        /// </summary>
+        internal static string STOPS_ID {
+            get {
+                return ResourceManager.GetString("STOPS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pause time.
+        /// </summary>
+        internal static string STOPS_PAUSE_TIME {
+            get {
+                return ResourceManager.GetString("STOPS_PAUSE_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Station id.
+        /// </summary>
+        internal static string STOPS_STATION_ID {
+            get {
+                return ResourceManager.GetString("STOPS_STATION_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of the stop for train.
+        /// </summary>
+        internal static string STOPS_STOP_NUMBER {
+            get {
+                return ResourceManager.GetString("STOPS_STOP_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train id.
+        /// </summary>
+        internal static string STOPS_TRAIN_ID {
+            get {
+                return ResourceManager.GetString("STOPS_TRAIN_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sold tickets.
+        /// </summary>
+        internal static string TICKETS {
+            get {
+                return ResourceManager.GetString("TICKETS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage.
+        /// </summary>
+        internal static string TICKETS_CARRIAGE_NUMBER {
+            get {
+                return ResourceManager.GetString("TICKETS_CARRIAGE_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of unboarding station.
+        /// </summary>
+        internal static string TICKETS_FIN_STATION_NUMBER {
+            get {
+                return ResourceManager.GetString("TICKETS_FIN_STATION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ticket id.
+        /// </summary>
+        internal static string TICKETS_ID {
+            get {
+                return ResourceManager.GetString("TICKETS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Place.
+        /// </summary>
+        internal static string TICKETS_PLACE_NUMBER {
+            get {
+                return ResourceManager.GetString("TICKETS_PLACE_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Race id.
+        /// </summary>
+        internal static string TICKETS_RACE_ID {
+            get {
+                return ResourceManager.GetString("TICKETS_RACE_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of boarding station.
+        /// </summary>
+        internal static string TICKETS_START_STATION_NUMBER {
+            get {
+                return ResourceManager.GetString("TICKETS_START_STATION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Types of trains.
+        /// </summary>
+        internal static string TRAIN_TYPE {
+            get {
+                return ResourceManager.GetString("TRAIN_TYPE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train type id.
+        /// </summary>
+        internal static string TRAIN_TYPE_ID {
+            get {
+                return ResourceManager.GetString("TRAIN_TYPE_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train type name.
+        /// </summary>
+        internal static string TRAIN_TYPE_NAME {
+            get {
+                return ResourceManager.GetString("TRAIN_TYPE_NAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Price multiplier.
+        /// </summary>
+        internal static string TRAIN_TYPE_PRICE_MULTIPLIER {
+            get {
+                return ResourceManager.GetString("TRAIN_TYPE_PRICE_MULTIPLIER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Speed multiplier.
+        /// </summary>
+        internal static string TRAIN_TYPE_SPEED_MULTIPLIER {
+            get {
+                return ResourceManager.GetString("TRAIN_TYPE_SPEED_MULTIPLIER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trains.
+        /// </summary>
+        internal static string TRAINS {
+            get {
+                return ResourceManager.GetString("TRAINS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train id.
+        /// </summary>
+        internal static string TRAINS_ID {
+            get {
+                return ResourceManager.GetString("TRAINS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train type id.
+        /// </summary>
+        internal static string TRAINS_TRAIN_TYPE_ID {
+            get {
+                return ResourceManager.GetString("TRAINS_TRAIN_TYPE_ID", resourceCulture);
             }
         }
         

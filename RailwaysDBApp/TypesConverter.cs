@@ -6,6 +6,7 @@ using System.Windows;
 using System.Windows.Media.Imaging;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
+using System.Reflection;
 
 namespace RailwaysDBApp
 {
@@ -54,5 +55,25 @@ namespace RailwaysDBApp
             return o;
         }
 
+        public static string GetResource(string key)
+        {
+            string value = null;
+            string curResourceFile = "RailwaysDBApp.Properties.Resources";
+            string localization = Properties.Settings.Default.Localization;
+
+            System.Resources.ResourceManager RM = new System.Resources.ResourceManager(curResourceFile, Assembly.GetExecutingAssembly());
+            try
+            {
+                value = RM.GetString(key).ToString();
+            }
+            catch
+            {
+            }
+
+            if (value != null)
+                return value;
+            else
+                return key;
+        }
     }
 }
