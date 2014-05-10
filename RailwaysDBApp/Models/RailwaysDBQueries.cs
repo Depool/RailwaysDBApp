@@ -54,6 +54,7 @@ namespace RailwaysDBApp.Models
                 tables = context.ExecuteStoreQuery<string>("select RDB$RELATION_NAME from RDB$RELATIONS" +
                                                            " where (RDB$SYSTEM_FLAG = 0) AND (RDB$RELATION_TYPE = 0)" +
                                                            " order by RDB$RELATION_NAME").ToList();
+                
             }
             catch (Exception ex)
             {
@@ -61,6 +62,8 @@ namespace RailwaysDBApp.Models
             }
             return tables;
         }
+
+        //public static 
 
     }
 }

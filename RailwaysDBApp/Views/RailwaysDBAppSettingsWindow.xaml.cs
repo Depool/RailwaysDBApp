@@ -42,6 +42,11 @@ namespace RailwaysDBApp.Views
 
                 Settings.Default.Localization = selectedItem.Tag as string;
                 Settings.Default.Save();
+
+                RailwaysDBAppEditDBWindow window = WindowsFactory.EditDB;
+                if (window.IsVisible)
+                    window.LanguageChanged();               
+                    
             }
         }
 

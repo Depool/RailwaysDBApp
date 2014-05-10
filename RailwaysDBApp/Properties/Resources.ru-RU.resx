@@ -333,7 +333,16 @@
   <data name="MainMenu_AddUser" xml:space="preserve">
     <value>Добавить пользователя</value>
   </data>
+  <data name="RACES_FORWARD" xml:space="preserve">
+    <value>Направление(0 - от 1-ой ст., 1 - от посл.ст.)</value>
+  </data>
   <data name="MainMenu_ChangeUser" xml:space="preserve">
     <value>Сменить пользователя</value>
+  </data>
+  <data name="MainMenu_Queries" xml:space="preserve">
+    <value>Выполнить запросы</value>
+  </data>
+  <data name="EditDBWindow_DeleteHint" xml:space="preserve">
+    <value>Чтобы удалить записи выделите их и нажмите delete на клавиатуре</value>
   </data>
 </root>

@@ -29,7 +29,7 @@
                       SelectionChanged="TablesComboBox_SelectionChanged"
                       />
             <Label Name="DeleteItems"
-                   Content="To delete records select them and press delete"
+                   Content="{Loc EditDBWindow_DeleteHint}"
                    Grid.Row="3"
                    HorizontalAlignment="Center"/>
         </Grid>

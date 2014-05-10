@@ -36,7 +36,8 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="RailwaysDAL">
+    <Reference Include="RailwaysDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
+      <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\RailwaysDAL.dll</HintPath>
     </Reference>
     <Reference Include="System" />
@@ -83,6 +84,9 @@
     <Compile Include="Views\RailwaysDBAppEditDBWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppEditDBWindow.xaml</DependentUpon>
     </Compile>
+    <Compile Include="Views\RailwaysDBAppQueriesWindow.xaml.cs">
+      <DependentUpon>RailwaysDBAppQueriesWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\RailwaysDBAppSettingsWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppSettingsWindow.xaml</DependentUpon>
     </Compile>
@@ -117,6 +121,10 @@
       <DependentUpon>RailwaysDBAppMainWindow.xaml</DependentUpon>
       <SubType>Code</SubType>
     </Compile>
+    <Page Include="Views\RailwaysDBAppQueriesWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
     <Page Include="Views\RailwaysDBAppSettingsWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>

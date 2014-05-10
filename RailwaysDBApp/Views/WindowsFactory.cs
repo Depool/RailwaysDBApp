@@ -15,6 +15,7 @@ namespace RailwaysDBApp.Views
         private static RailwaysDBAppEditDBWindow editDB = null;
         private static RailwaysDBAppAddNewUser addNewUser = null;
         private static RailwaysDBAppMainWindow loginWindow = null;
+        private static RailwaysDBAppQueriesWindow queriesWindow = null;
         
 
         //static properties
@@ -25,7 +26,10 @@ namespace RailwaysDBApp.Views
                 if (mainMenu == null || !mainMenu.IsVisible)
                 {
                     if (mainMenu != null)
+                    {
+                        //mainMenu.Close();
                         windows.Remove(mainMenu);
+                    }
                     mainMenu = new RailwaysDBAppMainMenu();
                     windows.Add(mainMenu);
                 }
@@ -40,7 +44,10 @@ namespace RailwaysDBApp.Views
                 if (settings == null || !settings.IsVisible)
                 {
                     if (settings != null)
+                    {
+                        //settings.Close();
                         windows.Remove(settings);
+                    }
                     settings = new RailwaysDBAppSettingsWindow();
                     windows.Add(settings);
                 }
@@ -55,7 +62,10 @@ namespace RailwaysDBApp.Views
                 if (editDB == null || !editDB.IsVisible)
                 {
                     if (editDB != null)
+                    {
+                        //editDB.Close();
                         windows.Remove(editDB);
+                    }
                     editDB = new RailwaysDBAppEditDBWindow();
                     windows.Add(editDB);
                 }
@@ -70,7 +80,10 @@ namespace RailwaysDBApp.Views
                 if (addNewUser == null || !addNewUser.IsVisible)
                 {
                     if (addNewUser != null)
+                    {
+                        //addNewUser.Close();
                         windows.Remove(addNewUser);
+                    }
                     addNewUser = new RailwaysDBAppAddNewUser();
                     windows.Add(addNewUser);
                 }
@@ -85,11 +98,33 @@ namespace RailwaysDBApp.Views
                 if (loginWindow == null || !loginWindow.IsVisible)
                 {
                     if (loginWindow != null)
+                    {
+                        //loginWindow.Close();
                         windows.Remove(loginWindow);
+                    }
+ 
                     loginWindow = new RailwaysDBAppMainWindow();
                     windows.Add(loginWindow);
                 }
                 return loginWindow;
+            }
+        }
+
+        public static RailwaysDBAppQueriesWindow QueriesWindow
+        {
+            get
+            {
+                if (queriesWindow == null || !queriesWindow.IsVisible)
+                {
+                    if (queriesWindow != null)
+                    {
+                        //queriesWindow.Close();
+                        windows.Remove(queriesWindow);
+                    }
+                    queriesWindow = new RailwaysDBAppQueriesWindow();
+                    windows.Add(queriesWindow);
+                }
+                return queriesWindow;
             }
         }
 
@@ -111,10 +146,9 @@ namespace RailwaysDBApp.Views
         public static void CloseAllWindows()
         {
             foreach (Window window in windows)
-                if (window.IsVisible)
+                if (window.IsVisible && window.GetType() != typeof(RailwaysDBAppMainWindow))
                     window.Close();
         }
-
 
     }
 }

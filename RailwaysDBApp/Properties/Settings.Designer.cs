@@ -25,7 +25,7 @@ namespace RailwaysDBApp.Properties {
         
         [global::System.Configuration.UserScopedSettingAttribute()]
         [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
-        [global::System.Configuration.DefaultSettingValueAttribute("en-US")]
+        [global::System.Configuration.DefaultSettingValueAttribute("ru-RU")]
         public string Localization {
             get {
                 return ((string)(this["Localization"]));

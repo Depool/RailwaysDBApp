@@ -20,19 +20,27 @@
                         Content="{Loc MainMenu_Tickets}"
                         Click="Tickets_Click"
                         Tag="user"
-                        Margin="0 5 0 15"/>
+                        Height="0"
+                        />
 
                 <Button Name="Routes"
                         Content="{Loc MainMenu_Routes}"
                         Click="Routes_Click"
+                        Height="0"
                         Tag="manager"/>
                 <Button Name="Races"
                         Content="{Loc MainMenu_Races}"
                         Click="Races_Click"
                         Tag="manager"
-                        Margin="0 1 0 15"/>
+                        Height="0"
+                        />
+                <Button Name="Queries"
+                        Content="{Loc MainMenu_Queries}"
+                        Click="Queries_Click"
+                        Tag="user"
+                        />
                 <Button Name="AddUser"
-                        Content="{Loc MainMenu_Tickets}"
+                        Content="{Loc MainMenu_AddUser}"
                         Click="AddUser_Click"
                         Tag="admin"
                         Margin="0 5 0 0"/>

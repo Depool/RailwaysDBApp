@@ -50,6 +50,7 @@ namespace RailwaysDBApp
             WindowsFactory.HideOpenedWindows();
             RailwaysDBAppMainWindow main = WindowsFactory.LoginWindow;
             App.OpenWindow(main);
+            bool ok = main.IsVisible;
             WindowsFactory.CloseHiddenWindows();
         }
 

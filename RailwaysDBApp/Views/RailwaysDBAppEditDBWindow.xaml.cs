@@ -34,6 +34,7 @@ namespace RailwaysDBApp.Views
         private bool isDataTabEditing;
         private List<string> columnsOriginalHeaders = new List<string>();
         private int generatorValueForCurTable = 0;
+        private List<string> tables = null;
 
         public RailwaysDBAppEditDBWindow()
         {
@@ -44,17 +45,18 @@ namespace RailwaysDBApp.Views
 
         private void Window_Loaded(object sender, RoutedEventArgs e)
         {
-            List<string> tables = RailwaysDBQueries.GetUserTablesNames();
+            tables = RailwaysDBQueries.GetUserTablesNames();
+            for (int i = 0; i < tables.Count; ++i)
+                tables[i] = tables[i].Replace(" ", String.Empty);
 
             if (tables != null)
                 foreach (string name in tables)
                 {
-                    string nname = name.Replace(" ", string.Empty);
-                    if (nname != "USERS" && nname != "PERMISSION_TYPE")
+                    if (name != "USERS" && name != "PERMISSION_TYPE")
                     {
                         ComboBoxItem item = new ComboBoxItem();
-                        item.Content = TypesConverter.GetResource(nname);
-                        item.Tag = nname;
+                        item.Content = TypesConverter.GetResource(name);
+                        item.Tag = name;
                         TablesComboBox.Items.Add(item);
                     }
                 };
@@ -147,10 +149,10 @@ namespace RailwaysDBApp.Views
             }
             catch (Exception ex)
             {
-                if (ex.InnerException == null)
+                /*if (ex.InnerException == null)
                     MessageBox.Show(ex.Message);
                 else
-                    MessageBox.Show(ex.InnerException.Message);
+                    MessageBox.Show(ex.InnerException.Message);*/
             }
         }
 
@@ -192,10 +194,21 @@ namespace RailwaysDBApp.Views
                 object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
                 object dataContext = e.Row.DataContext;
                 try{
-                    int isNewId = (int)dataContext.GetType().GetProperty("ID").GetValue(dataContext, null);
-                    //0 - значение id вместо null. Все валиные id в базе > 0
-                    if (isNewId == 0)
-                        dataContext.GetType().GetProperty("ID").SetValue(dataContext, ++generatorValueForCurTable, null);
+                    object obj = dataContext.GetType().GetProperty("ID").GetValue(dataContext, null);
+                    int isNewId;
+                    if (obj.GetType() == typeof(short))
+                    {
+                        isNewId = (short)obj;
+                        if (isNewId == 0)
+                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, (short)(++generatorValueForCurTable), null);
+                    }
+                    else
+                    {
+                        isNewId = (int)obj;
+                        //0 - значение id вместо null. Все валиные id в базе > 0
+                        if (isNewId == 0)
+                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, ++generatorValueForCurTable, null);
+                    }
                 }
                 catch{}
 
@@ -227,6 +240,18 @@ namespace RailwaysDBApp.Views
             catch
             {
 
+            }
+        }
+
+
+        public void LanguageChanged()
+        {
+            int i = 0;
+            foreach (ComboBoxItem item in TablesComboBox.Items)
+            {
+                string name = tables[i++];
+                if (name != "USERS" && name != "PERMISSION_TYPE")
+                    item.Content = TypesConverter.GetResource(name);
             }
         }
      }

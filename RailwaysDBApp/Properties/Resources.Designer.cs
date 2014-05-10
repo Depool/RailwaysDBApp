@@ -322,6 +322,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на To delete records select them and press delet on keyboard.
+        /// </summary>
+        internal static string EditDBWindow_DeleteHint {
+            get {
+                return ResourceManager.GetString("EditDBWindow_DeleteHint", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Edit DB tables.
         /// </summary>
         internal static string EditDBWindow_Name {
@@ -363,6 +372,15 @@ namespace RailwaysDBApp.Properties {
         internal static string MainMenu_Name {
             get {
                 return ResourceManager.GetString("MainMenu_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Execute queries.
+        /// </summary>
+        internal static string MainMenu_Queries {
+            get {
+                return ResourceManager.GetString("MainMenu_Queries", resourceCulture);
             }
         }
         
@@ -453,6 +471,15 @@ namespace RailwaysDBApp.Properties {
         internal static string RACES {
             get {
                 return ResourceManager.GetString("RACES", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Direction(0-from 1st stat., 1-from last).
+        /// </summary>
+        internal static string RACES_FORWARD {
+            get {
+                return ResourceManager.GetString("RACES_FORWARD", resourceCulture);
             }
         }
         

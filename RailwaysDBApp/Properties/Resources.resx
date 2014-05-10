@@ -340,7 +340,16 @@
   <data name="MainMenu_AddUser" xml:space="preserve">
     <value>Add user</value>
   </data>
+  <data name="RACES_FORWARD" xml:space="preserve">
+    <value>Direction(0-from 1st stat., 1-from last)</value>
+  </data>
   <data name="MainMenu_ChangeUser" xml:space="preserve">
     <value>Change user</value>
+  </data>
+  <data name="MainMenu_Queries" xml:space="preserve">
+    <value>Execute queries</value>
+  </data>
+  <data name="EditDBWindow_DeleteHint" xml:space="preserve">
+    <value>To delete records select them and press delet on keyboard</value>
   </data>
 </root>

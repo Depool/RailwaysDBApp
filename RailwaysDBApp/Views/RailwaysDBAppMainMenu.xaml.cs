@@ -71,5 +71,10 @@ namespace RailwaysDBApp.Views
         {
             WindowsFactory.CloseAllWindows();
         }
+
+        private void Queries_Click(object sender, RoutedEventArgs e)
+        {
+            App.OpenWindow(WindowsFactory.QueriesWindow);
+        }
     }
 }
