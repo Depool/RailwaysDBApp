@@ -61,6 +61,132 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Add user.
+        /// </summary>
+        internal static string AddUser_AddUser {
+            get {
+                return ResourceManager.GetString("AddUser_AddUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Administrator.
+        /// </summary>
+        internal static string AddUser_admin {
+            get {
+                return ResourceManager.GetString("AddUser_admin", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Attempt to add user failed.
+        /// </summary>
+        internal static string AddUser_Fail {
+            get {
+                return ResourceManager.GetString("AddUser_Fail", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Login:.
+        /// </summary>
+        internal static string AddUser_Login {
+            get {
+                return ResourceManager.GetString("AddUser_Login", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Manager.
+        /// </summary>
+        internal static string AddUser_manager {
+            get {
+                return ResourceManager.GetString("AddUser_manager", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Adding user.
+        /// </summary>
+        internal static string AddUser_Name {
+            get {
+                return ResourceManager.GetString("AddUser_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Not all fields are filled.
+        /// </summary>
+        internal static string AddUser_NonAllFields {
+            get {
+                return ResourceManager.GetString("AddUser_NonAllFields", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Password:.
+        /// </summary>
+        internal static string AddUser_Password {
+            get {
+                return ResourceManager.GetString("AddUser_Password", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Passwords don`t match.
+        /// </summary>
+        internal static string AddUser_PasswordsEqual {
+            get {
+                return ResourceManager.GetString("AddUser_PasswordsEqual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Permission:.
+        /// </summary>
+        internal static string AddUser_Permission {
+            get {
+                return ResourceManager.GetString("AddUser_Permission", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Repeat password:.
+        /// </summary>
+        internal static string AddUser_RepeatPassword {
+            get {
+                return ResourceManager.GetString("AddUser_RepeatPassword", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User succesfully registered.
+        /// </summary>
+        internal static string AddUser_Success {
+            get {
+                return ResourceManager.GetString("AddUser_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User.
+        /// </summary>
+        internal static string AddUser_user {
+            get {
+                return ResourceManager.GetString("AddUser_user", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User with the same name already exists.
+        /// </summary>
+        internal static string AddUser_UserExists {
+            get {
+                return ResourceManager.GetString("AddUser_UserExists", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Types of carriages.
         /// </summary>
         internal static string CARRIAGE_TYPE {
@@ -201,6 +327,24 @@ namespace RailwaysDBApp.Properties {
         internal static string EditDBWindow_Name {
             get {
                 return ResourceManager.GetString("EditDBWindow_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Add user.
+        /// </summary>
+        internal static string MainMenu_AddUser {
+            get {
+                return ResourceManager.GetString("MainMenu_AddUser", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Change user.
+        /// </summary>
+        internal static string MainMenu_ChangeUser {
+            get {
+                return ResourceManager.GetString("MainMenu_ChangeUser", resourceCulture);
             }
         }
         

@@ -23,6 +23,15 @@ namespace RailwaysDBApp.Controllers
             return int.MaxValue;
         }
 
+        //properties
+        public static List<PERMISSION_TYPE> PermissionTypes
+        {
+            get
+            {
+                return permissionTypes;
+            }
+        }
+
         //public
         public static void LoadPermissionList()
         {

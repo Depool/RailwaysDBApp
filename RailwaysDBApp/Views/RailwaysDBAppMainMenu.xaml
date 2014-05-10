@@ -7,7 +7,8 @@
         MinWidth="750"
         MaxHeight="500"
         MaxWidth="750"
-        Loaded="Window_Loaded">
+        Loaded="Window_Loaded"
+        Closed="Window_Closed">
     <Grid>
         <Image Name="MainMenuBackground"
                VerticalAlignment="Stretch"
@@ -20,6 +21,7 @@
                         Click="Tickets_Click"
                         Tag="user"
                         Margin="0 5 0 15"/>
+
                 <Button Name="Routes"
                         Content="{Loc MainMenu_Routes}"
                         Click="Routes_Click"
@@ -29,15 +31,26 @@
                         Click="Races_Click"
                         Tag="manager"
                         Margin="0 1 0 15"/>
+                <Button Name="AddUser"
+                        Content="{Loc MainMenu_Tickets}"
+                        Click="AddUser_Click"
+                        Tag="admin"
+                        Margin="0 5 0 0"/>
                 <Button Name="EditTables"
                         Content="{Loc MainMenu_EditTables}"
                         Click="EditTables_Click"
                         Tag="admin"
-                        Margin="0 5 0 15"/>
+                        Margin="0 0 0 15"/>
                 <Button Name="Settings"
                         Content="{Loc MainMenu_Settings}"
                         Click="Settings_Click"
-                        Tag="user"/>
+                        Tag="user"
+                        Margin="0 0 0 10"/>
+                <Button Name="ChangeUser"
+                        Content="{Loc MainMenu_ChangeUser}"
+                        Click="ChangeUser_Click"
+                        Tag="user"
+                        />
         </StackPanel>
     </Grid>
 </Window>

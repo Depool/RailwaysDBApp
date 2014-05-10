@@ -26,5 +26,5 @@ C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.Properties.Resources.uk-UA.resources
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\ru-RU\RailwaysDBApp.resources.dll
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\uk-UA\RailwaysDBApp.resources.dll
-C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppEditRecords.baml
-C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppEditRecords.g.cs
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppAddNewUser.baml
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppAddNewUser.g.cs

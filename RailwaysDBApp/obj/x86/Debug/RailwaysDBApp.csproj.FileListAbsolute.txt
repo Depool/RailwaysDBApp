@@ -26,3 +26,5 @@ C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppEditDBWindow.baml
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppEditDBWindow.g.cs
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\bin\Debug\RailwaysDAL.dll
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppAddNewUser.baml
+C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Debug\Views\RailwaysDBAppAddNewUser.g.cs

@@ -288,4 +288,52 @@
   <data name="TRAIN_TYPE_SPEED_MULTIPLIER" xml:space="preserve">
     <value>Множник швидкості</value>
   </data>
+  <data name="AddUser_AddUser" xml:space="preserve">
+    <value>Додати користувача</value>
+  </data>
+  <data name="AddUser_admin" xml:space="preserve">
+    <value>Адміністратор</value>
+  </data>
+  <data name="AddUser_Fail" xml:space="preserve">
+    <value>Спроба додати користувача не була успішною</value>
+  </data>
+  <data name="AddUser_Login" xml:space="preserve">
+    <value>Логін:</value>
+  </data>
+  <data name="AddUser_manager" xml:space="preserve">
+    <value>Менеджер</value>
+  </data>
+  <data name="AddUser_Name" xml:space="preserve">
+    <value>Додавання користувача</value>
+  </data>
+  <data name="AddUser_NonAllFields" xml:space="preserve">
+    <value>Заповнені не всі поля</value>
+  </data>
+  <data name="AddUser_Password" xml:space="preserve">
+    <value>Пароль:</value>
+  </data>
+  <data name="AddUser_PasswordsEqual" xml:space="preserve">
+    <value>Паролі не співпадають</value>
+  </data>
+  <data name="AddUser_Permission" xml:space="preserve">
+    <value>Права доступу:</value>
+  </data>
+  <data name="AddUser_RepeatPassword" xml:space="preserve">
+    <value>Повторіть пароль:</value>
+  </data>
+  <data name="AddUser_Success" xml:space="preserve">
+    <value>Користувача зареєстровано</value>
+  </data>
+  <data name="AddUser_user" xml:space="preserve">
+    <value>Користувач</value>
+  </data>
+  <data name="AddUser_UserExists" xml:space="preserve">
+    <value>Користувач з таким логіном уже зареєстрований</value>
+  </data>
+  <data name="MainMenu_AddUser" xml:space="preserve">
+    <value>Додати користувача</value>
+  </data>
+  <data name="MainMenu_ChangeUser" xml:space="preserve">
+    <value>Змінити користувача</value>
+  </data>
 </root>

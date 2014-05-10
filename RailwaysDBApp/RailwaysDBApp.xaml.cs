@@ -7,6 +7,7 @@ using System.Windows;
 using RailwaysDAL;
 using RailwaysDBApp.Controllers;
 using RailwaysDBApp.Properties;
+using RailwaysDBApp.Views;
 using System.Threading;
 using System.Globalization;
 
@@ -43,5 +44,14 @@ namespace RailwaysDBApp
             else
                 window.Activate();
         }
+
+        public static void OpenMainWindow()
+        {
+            WindowsFactory.HideOpenedWindows();
+            RailwaysDBAppMainWindow main = WindowsFactory.LoginWindow;
+            App.OpenWindow(main);
+            WindowsFactory.CloseHiddenWindows();
+        }
+
     }
 }

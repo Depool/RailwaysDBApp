@@ -56,5 +56,20 @@ namespace RailwaysDBApp.Views
             MainMenuBackground.Source = TypesConverter.BitmapToWPFBitmapSource(Properties.Resources.rails);
             PermissionManager.CheckPermission(this);
         }
+
+        private void AddUser_Click(object sender, RoutedEventArgs e)
+        {
+            App.OpenWindow(WindowsFactory.AddNewUser);
+        }
+
+        private void ChangeUser_Click(object sender, RoutedEventArgs e)
+        {
+            App.OpenMainWindow();
+        }
+
+        private void Window_Closed(object sender, EventArgs e)
+        {
+            WindowsFactory.CloseAllWindows();
+        }
     }
 }

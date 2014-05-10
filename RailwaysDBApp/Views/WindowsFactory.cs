@@ -2,21 +2,33 @@
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
+using System.Windows;
 
 namespace RailwaysDBApp.Views
 {
     internal static class WindowsFactory
     {
+        private static List<Window> windows = new List<Window>();
+
         private static RailwaysDBAppMainMenu mainMenu = null;
         private static RailwaysDBAppSettingsWindow settings = null;
         private static RailwaysDBAppEditDBWindow editDB = null;
+        private static RailwaysDBAppAddNewUser addNewUser = null;
+        private static RailwaysDBAppMainWindow loginWindow = null;
+        
 
+        //static properties
         public static RailwaysDBAppMainMenu MainMenu
         {
             get
             {
-                if (mainMenu == null)
+                if (mainMenu == null || !mainMenu.IsVisible)
+                {
+                    if (mainMenu != null)
+                        windows.Remove(mainMenu);
                     mainMenu = new RailwaysDBAppMainMenu();
+                    windows.Add(mainMenu);
+                }
                 return mainMenu;
             }
         }
@@ -26,7 +38,12 @@ namespace RailwaysDBApp.Views
             get
             {
                 if (settings == null || !settings.IsVisible)
+                {
+                    if (settings != null)
+                        windows.Remove(settings);
                     settings = new RailwaysDBAppSettingsWindow();
+                    windows.Add(settings);
+                }
                 return settings;
             }
         }
@@ -36,9 +53,68 @@ namespace RailwaysDBApp.Views
             get
             {
                 if (editDB == null || !editDB.IsVisible)
+                {
+                    if (editDB != null)
+                        windows.Remove(editDB);
                     editDB = new RailwaysDBAppEditDBWindow();
+                    windows.Add(editDB);
+                }
                 return editDB;
             }
         }
+
+        public static RailwaysDBAppAddNewUser AddNewUser
+        {
+            get
+            {
+                if (addNewUser == null || !addNewUser.IsVisible)
+                {
+                    if (addNewUser != null)
+                        windows.Remove(addNewUser);
+                    addNewUser = new RailwaysDBAppAddNewUser();
+                    windows.Add(addNewUser);
+                }
+                return addNewUser;
+            }
+        }
+
+        public static RailwaysDBAppMainWindow LoginWindow
+        {
+            get
+            {
+                if (loginWindow == null || !loginWindow.IsVisible)
+                {
+                    if (loginWindow != null)
+                        windows.Remove(loginWindow);
+                    loginWindow = new RailwaysDBAppMainWindow();
+                    windows.Add(loginWindow);
+                }
+                return loginWindow;
+            }
+        }
+
+        //static methods
+        public static void HideOpenedWindows()
+        {
+            foreach (Window window in windows)
+                if (window.IsVisible)
+                    window.Hide();
+        }
+
+        public static void CloseHiddenWindows()
+        {
+            foreach (Window window in windows)
+                if (!window.IsVisible)
+                    window.Close();
+        }
+
+        public static void CloseAllWindows()
+        {
+            foreach (Window window in windows)
+                if (window.IsVisible)
+                    window.Close();
+        }
+
+
     }
 }
