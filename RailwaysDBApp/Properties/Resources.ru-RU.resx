@@ -345,4 +345,16 @@
   <data name="EditDBWindow_DeleteHint" xml:space="preserve">
     <value>Чтобы удалить записи выделите их и нажмите delete на клавиатуре</value>
   </data>
+  <data name="Queries_CarriageOfTrains" xml:space="preserve">
+    <value>Вагони поездов</value>
+  </data>
+  <data name="Queries_TrainsDestinations" xml:space="preserve">
+    <value>Тупики поездов</value>
+  </data>
+  <data name="TRAINS_FINISH" xml:space="preserve">
+    <value>Конечная станция №2</value>
+  </data>
+  <data name="TRAINS_START" xml:space="preserve">
+    <value>Конечная станция №1</value>
+  </data>
 </root>

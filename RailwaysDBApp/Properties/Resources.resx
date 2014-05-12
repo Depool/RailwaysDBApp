@@ -352,4 +352,16 @@
   <data name="EditDBWindow_DeleteHint" xml:space="preserve">
     <value>To delete records select them and press delet on keyboard</value>
   </data>
+  <data name="Queries_CarriageOfTrains" xml:space="preserve">
+    <value>Carriages of trains</value>
+  </data>
+  <data name="Queries_TrainsDestinations" xml:space="preserve">
+    <value>Trains` destinations</value>
+  </data>
+  <data name="TRAINS_FINISH" xml:space="preserve">
+    <value>End station #2</value>
+  </data>
+  <data name="TRAINS_START" xml:space="preserve">
+    <value>End station #1</value>
+  </data>
 </root>

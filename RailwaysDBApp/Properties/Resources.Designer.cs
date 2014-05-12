@@ -466,6 +466,24 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriages of trains.
+        /// </summary>
+        internal static string Queries_CarriageOfTrains {
+            get {
+                return ResourceManager.GetString("Queries_CarriageOfTrains", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trains` destinations.
+        /// </summary>
+        internal static string Queries_TrainsDestinations {
+            get {
+                return ResourceManager.GetString("Queries_TrainsDestinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Races of trains.
         /// </summary>
         internal static string RACES {
@@ -737,11 +755,29 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на End station #2.
+        /// </summary>
+        internal static string TRAINS_FINISH {
+            get {
+                return ResourceManager.GetString("TRAINS_FINISH", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Train id.
         /// </summary>
         internal static string TRAINS_ID {
             get {
                 return ResourceManager.GetString("TRAINS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на End station #1.
+        /// </summary>
+        internal static string TRAINS_START {
+            get {
+                return ResourceManager.GetString("TRAINS_START", resourceCulture);
             }
         }
         
