@@ -1,7 +1,7 @@
 ﻿<Application x:Class="RailwaysDBApp.App"
              xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
              xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-             StartupUri="Views\RailwaysDBAppQueriesWindow.xaml"
+             StartupUri="Views\RailwaysDBAppMainMenu.xaml"
              LoadCompleted="Application_LoadCompleted"
              Startup="Application_Startup"
              >

@@ -357,4 +357,46 @@
   <data name="TRAINS_START" xml:space="preserve">
     <value>Конечная станция №1</value>
   </data>
+  <data name="Queries_AdjacentStations" xml:space="preserve">
+    <value>Смежные станции</value>
+  </data>
+  <data name="Queries_BoardingCityName" xml:space="preserve">
+    <value>Город посадки</value>
+  </data>
+  <data name="Queries_CityNotExist" xml:space="preserve">
+    <value>Станция {0} не существует</value>
+  </data>
+  <data name="Queries_FinishCity" xml:space="preserve">
+    <value>Конечная станция</value>
+  </data>
+  <data name="Queries_InputANumber" xml:space="preserve">
+    <value>Введите число</value>
+  </data>
+  <data name="Queries_Name" xml:space="preserve">
+    <value>Запросы к базе</value>
+  </data>
+  <data name="Queries_NoResult" xml:space="preserve">
+    <value>Запрос не дал результатов</value>
+  </data>
+  <data name="Queries_RacesForTrain" xml:space="preserve">
+    <value>Рейсы для поезда</value>
+  </data>
+  <data name="Queries_RacesThrough" xml:space="preserve">
+    <value>Найти рейсы</value>
+  </data>
+  <data name="Queries_StartCity" xml:space="preserve">
+    <value>Начальная станция</value>
+  </data>
+  <data name="Queries_StationName" xml:space="preserve">
+    <value>Имя станции</value>
+  </data>
+  <data name="Queries_TicketPrice" xml:space="preserve">
+    <value>Цена билета</value>
+  </data>
+  <data name="Queries_TicketsForRace" xml:space="preserve">
+    <value>Билеты на рейс</value>
+  </data>
+  <data name="Queries_TrainsThroughStation" xml:space="preserve">
+    <value>Поезда через станцию</value>
+  </data>
 </root>

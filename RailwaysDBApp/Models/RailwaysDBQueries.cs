@@ -42,11 +42,64 @@ namespace RailwaysDBApp.Models
         }
     }
 
+    internal class StationName
+    {
+        public string NAME { get; set; }
+
+        public static List<object> ColumnsMappings()
+        {
+            return new List<object>(){
+                                        TypesConverter.GetResource("STATIONS_NAME"),
+                                     };
+        }
+    }
+
+
     internal class TrainsDestinationHelp
     {
         public int? ID{get;set;}
         public int? MIN{get;set;}
         public int? MAX { get; set; }
+    }
+
+    internal class RacesForTrain
+    {
+        public int? ID { get; set; }
+        public DateTime START_TIME { get; set; }
+        public short? FORWARD { get; set; }
+        public static List<object> ColumnsMappings()
+        {
+            return new List<object>(){
+                                        TypesConverter.GetResource("RACES_ID"),
+                                        TypesConverter.GetResource("RACES_START_TIME"),
+                                        TypesConverter.GetResource("RACES_FORWARD")
+                                     };
+        }
+
+    }
+
+    internal class TrainIDAndStopNum
+    {
+        public int? TRAIN_ID { get; set; }
+        public short? STOP_NUMBER { get; set; }
+        public short? sn { get; set; }
+    }
+
+    internal class TicketsForRace
+    {
+        public string start { get; set; }
+        public string finish { get; set; }
+        public short carriageNumber { get; set; }
+        public short placeNumber { get; set; }
+                public static List<object> ColumnsMappings()
+        {
+            return new List<object>(){
+                                        TypesConverter.GetResource("TRAINS_START"),
+                                        TypesConverter.GetResource("TRAINS_FINISH"),
+                                        TypesConverter.GetResource("TICKETS_CARRIAGE_NUMBER"),
+                                        TypesConverter.GetResource("TICKETS_PLACE_NUMBER")
+                                     };
+        }
     }
 
     internal static class RailwaysDBQueries
@@ -124,17 +177,23 @@ namespace RailwaysDBApp.Models
             return res;
         }
 
-        public static List<TrainDestinations> GetTrainDestinations()
+        private static List<TrainsDestinationHelp> GetTrainDestinationsHelp(string filter)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<TrainsDestinationHelp> result = new List<TrainsDestinationHelp>();
+            result = context.ExecuteStoreQuery<TrainsDestinationHelp>("select TRAINS.ID, MIN(STOPS.STOP_NUMBER),MAX(STOPS.STOP_NUMBER)\n" +
+                                                                                                "from TRAINS\n" +
+                                                                                                "inner join STOPS\n" +
+                                                                                                "on TRAINS.ID = STOPS.TRAIN_ID " + filter +
+                                                                                                "group by TRAINS.ID\n").ToList();
+            return result;
+        }
+
+        private static List<TrainDestinations> GetTrainDestinationsByHelpInfo(List<TrainsDestinationHelp> help)
         {
             List<TrainDestinations> res = new List<TrainDestinations>();
-
             RailwaysEntities context = RailwaysData.sharedContext;
-            List<TrainsDestinationHelp> help = context.ExecuteStoreQuery<TrainsDestinationHelp>("select TRAINS.ID, MIN(STOPS.STOP_NUMBER),MAX(STOPS.STOP_NUMBER)\n" +
-                                                                                                "from TRAINS\n" +
-                                                                                                "left join STOPS\n" +
-                                                                                                "on TRAINS.ID = STOPS.TRAIN_ID\n" +
-                                                                                                "group by TRAINS.ID\n").ToList();
-            foreach(TrainsDestinationHelp h in help)
+            foreach (TrainsDestinationHelp h in help)
             {
                 List<int> ids = context.ExecuteStoreQuery<int>("select STOPS.STATION_ID\n" +
                                                                 "from STOPS\n" +
@@ -148,10 +207,151 @@ namespace RailwaysDBApp.Models
                 dest.ID = h.ID; dest.start = names[0]; dest.finish = names[1];
                 res.Add(dest);
             }
+            return res;
+        }
+
+        public static List<TrainDestinations> GetTrainDestinations()
+        {
+            List<TrainDestinations> res = new List<TrainDestinations>();
+            List<TrainsDestinationHelp> help = GetTrainDestinationsHelp(String.Empty);
+            res = GetTrainDestinationsByHelpInfo(help); 
 
             return res;
         }
-        
+
+        public static List<StationName> GetCorrespondingStationsFor(string name)
+        {
+            List<StationName> res = new List<StationName>();
+
+            RailwaysEntities context = RailwaysData.sharedContext;
+            string query = String.Format("select st.ID " +
+                                                          "from STATIONS as st " +
+                                                          "where st.NAME='{0}'", name);
+            List<int> id = context.ExecuteStoreQuery<int>(query).ToList();
+            if (id.Count > 0)
+            {
+                res = context.ExecuteStoreQuery<StationName>("select STATIONS.NAME\n" +
+                                                             "from EDGES\n" +
+                                                             "inner join STATIONS\n" +
+                                                             "on (STATIONS.ID!={0}) And\n" +
+                                                             "(EDGES.START_ID={0} Or EDGES.FIN_ID={0}) And\n" +
+                                                             "((EDGES.START_ID=STATIONS.ID) Or (EDGES.FIN_ID=STATIONS.ID))\n", id[0]).ToList();
+            }
+            return res;
+        }
+
+        public static List<RacesForTrain> GetRacesForTrainId(int id)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<RacesForTrain> res = context.ExecuteStoreQuery<RacesForTrain>("select ID,START_TIME,FORWARD\n" +
+                                                                                "from RACES\n" +
+                                                                                "where TRAIN_ID={0}\n", id).ToList();
+            return res;
+        }
+
+        public static List<TicketsForRace> GetTicketsForRace(int id)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<TICKET> tickets = context.ExecuteStoreQuery<TICKET>("select *\n"+
+                                                                     "from TICKETS\n"+
+                                                                     "where RACE_ID={0}",id).ToList();
+            List<TicketsForRace> res = new List<TicketsForRace>();
+            if (tickets.Count > 0)
+            {
+                List<int> trainId = context.ExecuteStoreQuery<int>("select TRAIN_ID\n"+
+                                                                   "from RACES\n"+
+                                                                   "where RACES.ID={0}",id).ToList();
+                foreach (TICKET ticket in tickets)
+                {
+                    TicketsForRace r = new TicketsForRace();
+                    r.placeNumber = ticket.PLACE_NUMBER;
+                    r.carriageNumber = ticket.CARRIAGE_NUMBER;
+
+                    //будет ровно одна запись в ответе при условии корректности БД
+                    try
+                    {
+                        r.start = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
+                                                                    "from STOPS\n" +
+                                                                    "inner join STATIONS\n" +
+                                                                    "on STOPS.TRAIN_ID={0} And STOPS.STOP_NUMBER={1}\n" +
+                                                                    "And STOPS.STATION_ID=STATIONS.ID",trainId[0],ticket.START_STATION_NUMBER).ToList()[0];
+                        r.finish = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
+                                                                    "from STOPS\n" +
+                                                                    "inner join STATIONS\n" +
+                                                                    "on STOPS.TRAIN_ID={0} And STOPS.STOP_NUMBER={1}\n" +
+                                                                    "And STOPS.STATION_ID=STATIONS.ID", trainId[0], ticket.FIN_STATION_NUMBER).ToList()[0];
+                        res.Add(r);
+                    }
+                    catch { }
+
+                }
+            }
+            return res;
+        }
+
+        public static List<int> GetCityIdByName(string city)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<int> res = context.ExecuteStoreQuery<int>("SELECT ID " +
+                                                           "FROM STATIONS a " +
+                                                           "where a.NAME={0}", city).ToList();
+            return res;
+        }
+
+        public static List<RACE> GetProperRaces(string startCity, string finCity)
+        {
+            List<RACE> result = new List<RACE>();
+
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<int> sID = GetCityIdByName(startCity);
+            if (sID.Count == 0)
+            {
+                MessageBox.Show(String.Format(TypesConverter.GetResource("Queries_CityNotExist"), startCity));
+                return result;
+            }
+            List<int> fID = GetCityIdByName(finCity);
+            if (fID.Count == 0)
+            {
+                MessageBox.Show(String.Format(TypesConverter.GetResource("Queries_CityNotExist"), finCity));
+                return result;
+            }
+
+            List<TrainIDAndStopNum> trains = context.ExecuteStoreQuery<TrainIDAndStopNum>("select TRAIN_ID,STOP_NUMBER,sn from\n"+
+                                                                                          "(select TRAIN_ID,STOP_NUMBER from STOPS where STATION_ID={0}) as one\n"+
+                                                                                          "inner join\n"+
+                                                                                          "(select id,sn from\n"+
+                                                                                          "(select TRAIN_ID as id,STOP_NUMBER as sn from STOPS where STATION_ID={1})) as two\n"+
+                                                                                          "on one.TRAIN_ID=id",sID[0],fID[0]).ToList();
+            foreach (TrainIDAndStopNum tr in trains)
+            {
+                string condition = String.Empty;
+                if (tr.STOP_NUMBER < tr.sn)
+                    condition = " And FORWARD=0";
+                if (tr.STOP_NUMBER > tr.sn)
+                    condition = " And FORWARD=1";
+                result.AddRange(context.ExecuteStoreQuery<RACE>("select * from RACES\n"+
+                                                                "where TRAIN_ID={0}"+condition,tr.TRAIN_ID).ToList());
+            }
+
+            return result;
+        }
+
+        public static List<TrainDestinations> GetTrainsThroughStation(string name)
+        {
+            List<TrainDestinations> result = new List<TrainDestinations>();
+            RailwaysEntities context = RailwaysData.sharedContext;
+            List<int> ID = GetCityIdByName(name);
+            if (ID.Count == 0)
+            {
+                MessageBox.Show(String.Format(TypesConverter.GetResource("Queries_CityNotExist"), name));
+                return result;
+            }
+            string filter = String.Format("And TRAINS.ID in (select STOPS.TRAIN_ID from STOPS where STOPS.STATION_ID={0})\n",ID[0]);
+            List<TrainsDestinationHelp> help = GetTrainDestinationsHelp(filter);
+            result = GetTrainDestinationsByHelpInfo(help);
+            return result;
+        }
+
 
     }
 }

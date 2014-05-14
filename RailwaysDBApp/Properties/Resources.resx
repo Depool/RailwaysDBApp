@@ -364,4 +364,46 @@
   <data name="TRAINS_START" xml:space="preserve">
     <value>End station #1</value>
   </data>
+  <data name="Queries_AdjacentStations" xml:space="preserve">
+    <value>Adjacent stations</value>
+  </data>
+  <data name="Queries_BoardingCityName" xml:space="preserve">
+    <value>Boarding stat. name</value>
+  </data>
+  <data name="Queries_CityNotExist" xml:space="preserve">
+    <value>City {0} doesn`t exist</value>
+  </data>
+  <data name="Queries_FinishCity" xml:space="preserve">
+    <value>Finish station</value>
+  </data>
+  <data name="Queries_InputANumber" xml:space="preserve">
+    <value>Input a number</value>
+  </data>
+  <data name="Queries_Name" xml:space="preserve">
+    <value>Queries</value>
+  </data>
+  <data name="Queries_NoResult" xml:space="preserve">
+    <value>Query`s result is empty</value>
+  </data>
+  <data name="Queries_RacesForTrain" xml:space="preserve">
+    <value>Races for train</value>
+  </data>
+  <data name="Queries_RacesThrough" xml:space="preserve">
+    <value>Find races through</value>
+  </data>
+  <data name="Queries_StartCity" xml:space="preserve">
+    <value>Starting station</value>
+  </data>
+  <data name="Queries_StationName" xml:space="preserve">
+    <value>Station name</value>
+  </data>
+  <data name="Queries_TicketPrice" xml:space="preserve">
+    <value>Ticket price</value>
+  </data>
+  <data name="Queries_TicketsForRace" xml:space="preserve">
+    <value>Tickets for race</value>
+  </data>
+  <data name="Queries_TrainsThroughStation" xml:space="preserve">
+    <value>Trains through station</value>
+  </data>
 </root>

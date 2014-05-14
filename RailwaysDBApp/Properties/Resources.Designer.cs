@@ -466,6 +466,24 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Adjacent stations.
+        /// </summary>
+        internal static string Queries_AdjacentStations {
+            get {
+                return ResourceManager.GetString("Queries_AdjacentStations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Boarding stat. name.
+        /// </summary>
+        internal static string Queries_BoardingCityName {
+            get {
+                return ResourceManager.GetString("Queries_BoardingCityName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Carriages of trains.
         /// </summary>
         internal static string Queries_CarriageOfTrains {
@@ -475,11 +493,119 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на City {0} doesn`t exist.
+        /// </summary>
+        internal static string Queries_CityNotExist {
+            get {
+                return ResourceManager.GetString("Queries_CityNotExist", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Finish station.
+        /// </summary>
+        internal static string Queries_FinishCity {
+            get {
+                return ResourceManager.GetString("Queries_FinishCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Input a number.
+        /// </summary>
+        internal static string Queries_InputANumber {
+            get {
+                return ResourceManager.GetString("Queries_InputANumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Queries.
+        /// </summary>
+        internal static string Queries_Name {
+            get {
+                return ResourceManager.GetString("Queries_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Query`s result is empty.
+        /// </summary>
+        internal static string Queries_NoResult {
+            get {
+                return ResourceManager.GetString("Queries_NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Races for train.
+        /// </summary>
+        internal static string Queries_RacesForTrain {
+            get {
+                return ResourceManager.GetString("Queries_RacesForTrain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Find races through.
+        /// </summary>
+        internal static string Queries_RacesThrough {
+            get {
+                return ResourceManager.GetString("Queries_RacesThrough", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Starting station.
+        /// </summary>
+        internal static string Queries_StartCity {
+            get {
+                return ResourceManager.GetString("Queries_StartCity", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Station name.
+        /// </summary>
+        internal static string Queries_StationName {
+            get {
+                return ResourceManager.GetString("Queries_StationName", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ticket price.
+        /// </summary>
+        internal static string Queries_TicketPrice {
+            get {
+                return ResourceManager.GetString("Queries_TicketPrice", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tickets for race.
+        /// </summary>
+        internal static string Queries_TicketsForRace {
+            get {
+                return ResourceManager.GetString("Queries_TicketsForRace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Trains` destinations.
         /// </summary>
         internal static string Queries_TrainsDestinations {
             get {
                 return ResourceManager.GetString("Queries_TrainsDestinations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Trains through station.
+        /// </summary>
+        internal static string Queries_TrainsThroughStation {
+            get {
+                return ResourceManager.GetString("Queries_TrainsThroughStation", resourceCulture);
             }
         }
         
