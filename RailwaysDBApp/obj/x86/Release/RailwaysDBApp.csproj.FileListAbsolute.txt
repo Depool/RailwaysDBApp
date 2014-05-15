@@ -30,3 +30,4 @@ C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBAp
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppAddNewUser.g.cs
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppQueriesWindow.baml
 C:\Users\Depool\documents\visual studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\Views\RailwaysDBAppQueriesWindow.g.cs
+C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\obj\x86\Release\RailwaysDBApp.reportDisplayForm.resources

@@ -39,6 +39,12 @@
                         Click="Queries_Click"
                         Tag="user"
                         />
+                <Button Name="Reports"
+                        Content="{Loc MainMenu_Reports}"
+                        Click="Reports_Click"
+                        Tag="user"
+                        Margin="0 0 0 0"
+                        />
                 <Button Name="AddUser"
                         Content="{Loc MainMenu_AddUser}"
                         Click="AddUser_Click"
@@ -58,6 +64,7 @@
                         Content="{Loc MainMenu_ChangeUser}"
                         Click="ChangeUser_Click"
                         Tag="user"
+                        Height="0"
                         />
         </StackPanel>
     </Grid>

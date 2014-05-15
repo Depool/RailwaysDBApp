@@ -11,7 +11,8 @@
     <RootNamespace>RailwaysDBApp</RootNamespace>
     <AssemblyName>RailwaysDBApp</AssemblyName>
     <TargetFrameworkVersion>v4.0</TargetFrameworkVersion>
-    <TargetFrameworkProfile>Client</TargetFrameworkProfile>
+    <TargetFrameworkProfile>
+    </TargetFrameworkProfile>
     <FileAlignment>512</FileAlignment>
     <ProjectTypeGuids>{60dc8134-eba5-43b8-bcc9-bb4bc16c2548};{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}</ProjectTypeGuids>
     <WarningLevel>4</WarningLevel>
@@ -36,6 +37,11 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
+    <Reference Include="CrystalDecisions.CrystalReports.Engine, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.ReportSource, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Shared, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="CrystalDecisions.Windows.Forms, Version=13.0.2000.0, Culture=neutral, PublicKeyToken=692fbea5521e1304, processorArchitecture=MSIL" />
+    <Reference Include="FlashControlV71, Version=1.0.3187.32366, Culture=neutral, PublicKeyToken=692fbea5521e1304" />
     <Reference Include="RailwaysDAL, Version=1.0.0.0, Culture=neutral, processorArchitecture=MSIL">
       <SpecificVersion>False</SpecificVersion>
       <HintPath>..\dll\RailwaysDAL.dll</HintPath>
@@ -45,6 +51,9 @@
     <Reference Include="System.Data.Entity" />
     <Reference Include="System.Data.Linq" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.Windows.Forms" />
     <Reference Include="System.Xml" />
     <Reference Include="Microsoft.CSharp" />
     <Reference Include="System.Core" />
@@ -65,7 +74,22 @@
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Reports\CarriagesOfTrainsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>CarriagesOfTrainsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Controllers\PermissionManager.cs" />
+    <Compile Include="dsWorkOrderSchema.cs">
+      <DependentUpon>dsWorkOrderSchema.xsd</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="dsWorkOrderSchema.Designer.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>dsWorkOrderSchema.xsd</DependentUpon>
+    </Compile>
     <Compile Include="GraphicalConstants.cs" />
     <Compile Include="Models\RailwaysDBQueries.cs" />
     <Compile Include="Properties\Resources.Designer.cs">
@@ -78,6 +102,18 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.uk-UA.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\TrainsDestinationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainsDestinationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Views\reportDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\reportDisplayForm.Designer.cs">
+      <DependentUpon>reportDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\RailwaysDBAppAddNewUser.xaml.cs">
       <DependentUpon>RailwaysDBAppAddNewUser.xaml</DependentUpon>
     </Compile>
@@ -89,6 +125,12 @@
     </Compile>
     <Compile Include="Views\RailwaysDBAppSettingsWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppSettingsWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Reports\TrainsThroughStationReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainsThroughStationReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
     </Compile>
     <Compile Include="Views\WindowsFactory.cs" />
     <Page Include="Views\RailwaysDBAppAddNewUser.xaml">
@@ -140,6 +182,17 @@
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
     <None Include="App.Config" />
+    <None Include="dsWorkOrderSchema.xsc">
+      <DependentUpon>dsWorkOrderSchema.xsd</DependentUpon>
+    </None>
+    <None Include="dsWorkOrderSchema.xsd">
+      <SubType>Designer</SubType>
+      <Generator>MSDataSetGenerator</Generator>
+      <LastGenOutput>dsWorkOrderSchema.Designer.cs</LastGenOutput>
+    </None>
+    <None Include="dsWorkOrderSchema.xss">
+      <DependentUpon>dsWorkOrderSchema.xsd</DependentUpon>
+    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -147,6 +200,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\CarriagesOfTrainsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>CarriagesOfTrainsReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Properties\Resources.resx">
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
@@ -156,12 +213,26 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.uk-UA.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TrainsDestinationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrainsDestinationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\reportDisplayForm.resx">
+      <DependentUpon>reportDisplayForm.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TrainsThroughStationReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrainsThroughStationReport.cs</LastGenOutput>
+    </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\ukrzaliznytsya.jpg" />
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\rails.jpg" />
+  </ItemGroup>
+  <ItemGroup>
+    <Service Include="{C0C07587-41A7-46C8-8FBD-3F9C8EBE2DDC}" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

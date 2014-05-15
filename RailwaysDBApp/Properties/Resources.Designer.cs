@@ -394,6 +394,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Reports.
+        /// </summary>
+        internal static string MainMenu_Reports {
+            get {
+                return ResourceManager.GetString("MainMenu_Reports", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Edit routes.
         /// </summary>
         internal static string MainMenu_Routes {
@@ -661,6 +670,15 @@ namespace RailwaysDBApp.Properties {
             get {
                 object obj = ResourceManager.GetObject("rails", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Reports.
+        /// </summary>
+        internal static string Report {
+            get {
+                return ResourceManager.GetString("Report", resourceCulture);
             }
         }
         

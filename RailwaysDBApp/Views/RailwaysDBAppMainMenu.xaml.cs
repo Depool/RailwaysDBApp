@@ -76,5 +76,11 @@ namespace RailwaysDBApp.Views
         {
             App.OpenWindow(WindowsFactory.QueriesWindow);
         }
+
+        private void Reports_Click(object sender, RoutedEventArgs e)
+        {
+            reportDisplayForm form = new reportDisplayForm();
+            form.Show();
+        }
     }
 }

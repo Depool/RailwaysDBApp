@@ -7,6 +7,7 @@ using System.Windows.Media.Imaging;
 using System.Runtime.InteropServices;
 using System.Security.Cryptography;
 using System.Reflection;
+using System.Data;
 
 namespace RailwaysDBApp
 {
@@ -74,6 +75,23 @@ namespace RailwaysDBApp
                 return value;
             else
                 return key;
+        }
+
+        public static void EntityToDataSet(DataSet dataSet, object entity)
+        {
+            string tableName = String.Empty;
+            DataRow newRow = null;
+            PropertyInfo[] props = entity.GetType().GetProperties();
+
+            tableName = entity.GetType().Name;
+            newRow = dataSet.Tables[tableName].NewRow();
+
+            foreach (PropertyInfo field in props)
+            {
+                if (newRow.Table.Columns.Contains(field.Name))
+                    newRow[field.Name] = field.GetValue(entity, null);
+            }
+            dataSet.Tables[tableName].Rows.Add(newRow);
         }
     }
 }

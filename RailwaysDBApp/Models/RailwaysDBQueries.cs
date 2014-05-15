@@ -42,6 +42,14 @@ namespace RailwaysDBApp.Models
         }
     }
 
+    internal class StationAndTrains
+    {
+        public string StationName{get;set;}
+        public int? ID { get; set; }
+        public string start { get; set; }
+        public string finish { get; set; }
+    }
+
     internal class StationName
     {
         public string NAME { get; set; }
@@ -59,7 +67,7 @@ namespace RailwaysDBApp.Models
     {
         public int? ID{get;set;}
         public int? MIN{get;set;}
-        public int? MAX { get; set; }
+        public int? MAX{get;set;}
     }
 
     internal class RacesForTrain

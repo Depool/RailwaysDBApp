@@ -406,4 +406,10 @@
   <data name="Queries_TrainsThroughStation" xml:space="preserve">
     <value>Trains through station</value>
   </data>
+  <data name="MainMenu_Reports" xml:space="preserve">
+    <value>Reports</value>
+  </data>
+  <data name="Report" xml:space="preserve">
+    <value>Reports</value>
+  </data>
 </root>
