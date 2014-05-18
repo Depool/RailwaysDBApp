@@ -343,7 +343,7 @@
     <value>Виконати запити</value>
   </data>
   <data name="EditDBWindow_DeleteHint" xml:space="preserve">
-    <value>Щоб видалити записи виділіть їх та натисніть delete на клавиатурі</value>
+    <value>Щоб видалити записи виділіть їх та натисніть delete на клавіатурі</value>
   </data>
   <data name="Queries_CarriageOfTrains" xml:space="preserve">
     <value>Вагони поїздів</value>

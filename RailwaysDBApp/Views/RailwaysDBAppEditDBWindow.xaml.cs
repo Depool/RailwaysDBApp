@@ -52,7 +52,7 @@ namespace RailwaysDBApp.Views
             if (tables != null)
                 foreach (string name in tables)
                 {
-                    if (name != "USERS" && name != "PERMISSION_TYPE")
+                    if (name != "USERS" && name != "PERMISSION_TYPE" && name != "sysdiagrams")
                     {
                         ComboBoxItem item = new ComboBoxItem();
                         item.Content = TypesConverter.GetResource(name);

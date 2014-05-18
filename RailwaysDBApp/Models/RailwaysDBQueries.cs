@@ -66,8 +66,8 @@ namespace RailwaysDBApp.Models
     internal class TrainsDestinationHelp
     {
         public int? ID{get;set;}
-        public int? MIN{get;set;}
-        public int? MAX{get;set;}
+        public Int16? MIN{get;set;}
+        public Int16? MAX{get;set;} //!!!
     }
 
     internal class RacesForTrain
@@ -119,8 +119,10 @@ namespace RailwaysDBApp.Models
             List<int> result = new List<int>();
             try
             {
-                string query = String.Format("select count(RDB$FIELD_NAME) from RDB$RELATION_FIELDS\n"+
-                                             "where (RDB$RELATION_NAME = '{0}')", table);
+                string query = String.Format("select count(COLUMN_NAME)\n" +
+                                             "from\n" +
+                                             "INFORMATION_SCHEMA.columns \n" +
+                                             "where TABLE_NAME='{0}'", table);
                 result = context.ExecuteStoreQuery<int>(query).ToList();
             }
             catch (Exception ex)
@@ -139,8 +141,12 @@ namespace RailwaysDBApp.Models
             List<string> result = new List<string>();
             try
             {
-                string query = String.Format("select RDB$FIELD_NAME from RDB$RELATION_FIELDS\n"+ 
-                                             "where (RDB$RELATION_NAME = '{0}')", table);
+                string query = String.Format("select COLUMN_NAME\n" +
+                                             "from\n" +
+                                             "INFORMATION_SCHEMA.columns \n" +
+                                             "where TABLE_NAME='{0}'\n"+
+                                             "order by\n" +
+                                             "ORDINAL_POSITION asc", table);
                 result = context.ExecuteStoreQuery<string>(query).ToList();
             }
             catch (Exception ex)
@@ -156,9 +162,8 @@ namespace RailwaysDBApp.Models
             RailwaysEntities context = RailwaysData.sharedContext;
             try
             {
-                tables = context.ExecuteStoreQuery<string>("select RDB$RELATION_NAME from RDB$RELATIONS" +
-                                                           " where (RDB$SYSTEM_FLAG = 0) AND (RDB$RELATION_TYPE = 0)" +
-                                                           " order by RDB$RELATION_NAME").ToList();
+                tables = context.ExecuteStoreQuery<string>("select name from sys.tables where type_desc = 'USER_TABLE'\n" +
+                                                           "order by name").ToList();
                 
             }
             catch (Exception ex)
@@ -189,11 +194,18 @@ namespace RailwaysDBApp.Models
         {
             RailwaysEntities context = RailwaysData.sharedContext;
             List<TrainsDestinationHelp> result = new List<TrainsDestinationHelp>();
-            result = context.ExecuteStoreQuery<TrainsDestinationHelp>("select TRAINS.ID, MIN(STOPS.STOP_NUMBER),MAX(STOPS.STOP_NUMBER)\n" +
-                                                                                                "from TRAINS\n" +
-                                                                                                "inner join STOPS\n" +
-                                                                                                "on TRAINS.ID = STOPS.TRAIN_ID " + filter +
-                                                                                                "group by TRAINS.ID\n").ToList();
+            try
+            {
+                result = context.ExecuteStoreQuery<TrainsDestinationHelp>("select TRAINS.ID, min(st.STOP_NUMBER) as MIN, max(st.STOP_NUMBER) as MAX\n" +
+                                                                                                    "from TRAINS\n" +
+                                                                                                    "inner join STOPS as st\n" +
+                                                                                                    "on TRAINS.ID = st.TRAIN_ID " + filter +
+                                                                                                    "group by TRAINS.ID\n").ToList();
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message);
+            }
             return result;
         }
 
@@ -301,7 +313,7 @@ namespace RailwaysDBApp.Models
         {
             RailwaysEntities context = RailwaysData.sharedContext;
             List<int> res = context.ExecuteStoreQuery<int>("SELECT ID " +
-                                                           "FROM STATIONS a " +
+                                                           "FROM STATIONS as a " +
                                                            "where a.NAME={0}", city).ToList();
             return res;
         }
@@ -324,11 +336,11 @@ namespace RailwaysDBApp.Models
                 return result;
             }
 
-            List<TrainIDAndStopNum> trains = context.ExecuteStoreQuery<TrainIDAndStopNum>("select TRAIN_ID,STOP_NUMBER,sn from\n"+
-                                                                                          "(select TRAIN_ID,STOP_NUMBER from STOPS where STATION_ID={0}) as one\n"+
+            List<TrainIDAndStopNum> trains = context.ExecuteStoreQuery<TrainIDAndStopNum>("select TRAIN_ID,STOP_NUMBER,sn from(\n"+
+                                                                                          "select TRAIN_ID,STOP_NUMBER from STOPS where STATION_ID={0}) as one\n"+
                                                                                           "inner join\n"+
-                                                                                          "(select id,sn from\n"+
-                                                                                          "(select TRAIN_ID as id,STOP_NUMBER as sn from STOPS where STATION_ID={1})) as two\n"+
+                                                                                          "(select id,sn from(\n"+
+                                                                                          "select TRAIN_ID as id,STOP_NUMBER as sn from STOPS where STATION_ID={1})) as two\n"+
                                                                                           "on one.TRAIN_ID=id",sID[0],fID[0]).ToList();
             foreach (TrainIDAndStopNum tr in trains)
             {

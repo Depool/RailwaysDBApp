@@ -27,6 +27,9 @@ namespace RailwaysDBApp
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            string s = Environment.CurrentDirectory;
+
+            AppDomain.CurrentDomain.SetData("DataDirectory", s);
             var culture = CultureInfo.GetCultureInfo(Settings.Default.Localization);
 
             Thread.CurrentThread.CurrentCulture = culture;
