@@ -33,7 +33,6 @@ namespace RailwaysDBApp.Views
         private string curTableName;
         private bool isDataTabEditing;
         private List<string> columnsOriginalHeaders = new List<string>();
-        private int generatorValueForCurTable = 0;
         private List<string> tables = null;
 
         public RailwaysDBAppEditDBWindow()
@@ -76,19 +75,9 @@ namespace RailwaysDBApp.Views
                 DataTab.ItemsSource = null;
                 object collection = TypesConverter.CreateGenericList(editingType);
 
-                generatorValueForCurTable = 0;
                 MethodInfo mListAdd = collection.GetType().GetMethod("Add");
                 foreach (dynamic q in query)
-                {
-                     try
-                     {
-                         int id = (int)context.GetType().GetProperty(tableName).PropertyType.GetGenericArguments()[0].GetProperty("ID").GetValue(q, null);
-                         if (id > generatorValueForCurTable)
-                             generatorValueForCurTable = id;
-                     }
-                     catch{}
                      mListAdd.Invoke(collection, new object[] { q });
-                }
                 
                 DataTab.ItemsSource = (IEnumerable)collection;
                 DataTab.DataContext = context.GetType().GetProperty(tableName).GetValue(context, null);
@@ -200,14 +189,14 @@ namespace RailwaysDBApp.Views
                     {
                         isNewId = (short)obj;
                         if (isNewId == 0)
-                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, (short)(++generatorValueForCurTable), null);
+                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, (short)RailwaysData.GetIndexForTable(curTableName), null);
                     }
                     else
                     {
                         isNewId = (int)obj;
                         //0 - значение id вместо null. Все валиные id в базе > 0
                         if (isNewId == 0)
-                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, ++generatorValueForCurTable, null);
+                            dataContext.GetType().GetProperty("ID").SetValue(dataContext, RailwaysData.GetIndexForTable(curTableName), null);
                     }
                 }
                 catch{}

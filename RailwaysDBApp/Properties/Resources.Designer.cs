@@ -61,6 +61,150 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на The train must have at least one carriage.
+        /// </summary>
+        internal static string AddTrain_CarriagesNeeded {
+            get {
+                return ResourceManager.GetString("AddTrain_CarriagesNeeded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriages of type {0}.
+        /// </summary>
+        internal static string AddTrain_CarriagesOfType {
+            get {
+                return ResourceManager.GetString("AddTrain_CarriagesOfType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Find path.
+        /// </summary>
+        internal static string AddTrain_FindPath {
+            get {
+                return ResourceManager.GetString("AddTrain_FindPath", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на From:.
+        /// </summary>
+        internal static string AddTrain_From {
+            get {
+                return ResourceManager.GetString("AddTrain_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Adding the train.
+        /// </summary>
+        internal static string AddTrain_Name {
+            get {
+                return ResourceManager.GetString("AddTrain_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на An error occured while adding train.
+        /// </summary>
+        internal static string AddTrain_ProblemsAddingTrain {
+            get {
+                return ResourceManager.GetString("AddTrain_ProblemsAddingTrain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Register train.
+        /// </summary>
+        internal static string AddTrain_RegisterTrain {
+            get {
+                return ResourceManager.GetString("AddTrain_RegisterTrain", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stations on the way.
+        /// </summary>
+        internal static string AddTrain_StationsOnTheWay {
+            get {
+                return ResourceManager.GetString("AddTrain_StationsOnTheWay", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stop time.
+        /// </summary>
+        internal static string AddTrain_StopTime {
+            get {
+                return ResourceManager.GetString("AddTrain_StopTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на The train has been added successfully.
+        /// </summary>
+        internal static string AddTrain_SuccessfullyAdded {
+            get {
+                return ResourceManager.GetString("AddTrain_SuccessfullyAdded", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To:.
+        /// </summary>
+        internal static string AddTrain_To {
+            get {
+                return ResourceManager.GetString("AddTrain_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Type of train.
+        /// </summary>
+        internal static string AddTrain_TrainType {
+            get {
+                return ResourceManager.GetString("AddTrain_TrainType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Fast.
+        /// </summary>
+        internal static string AddTrain_TrainType_fast {
+            get {
+                return ResourceManager.GetString("AddTrain_TrainType_fast", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на High speed.
+        /// </summary>
+        internal static string AddTrain_TrainType_high {
+            get {
+                return ResourceManager.GetString("AddTrain_TrainType_high", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Intercity.
+        /// </summary>
+        internal static string AddTrain_TrainType_inter {
+            get {
+                return ResourceManager.GetString("AddTrain_TrainType_inter", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Usual.
+        /// </summary>
+        internal static string AddTrain_TrainType_usual {
+            get {
+                return ResourceManager.GetString("AddTrain_TrainType_usual", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Add user.
         /// </summary>
         internal static string AddUser_AddUser {
@@ -349,6 +493,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy a ticket.
+        /// </summary>
+        internal static string MainMenu_BuyTicket {
+            get {
+                return ResourceManager.GetString("MainMenu_BuyTicket", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Change user.
         /// </summary>
         internal static string MainMenu_ChangeUser {
@@ -385,15 +538,6 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
-        ///   Ищет локализованную строку, похожую на Edit races.
-        /// </summary>
-        internal static string MainMenu_Races {
-            get {
-                return ResourceManager.GetString("MainMenu_Races", resourceCulture);
-            }
-        }
-        
-        /// <summary>
         ///   Ищет локализованную строку, похожую на Reports.
         /// </summary>
         internal static string MainMenu_Reports {
@@ -417,15 +561,6 @@ namespace RailwaysDBApp.Properties {
         internal static string MainMenu_Settings {
             get {
                 return ResourceManager.GetString("MainMenu_Settings", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Ищет локализованную строку, похожую на Get a ticket.
-        /// </summary>
-        internal static string MainMenu_Tickets {
-            get {
-                return ResourceManager.GetString("MainMenu_Tickets", resourceCulture);
             }
         }
         

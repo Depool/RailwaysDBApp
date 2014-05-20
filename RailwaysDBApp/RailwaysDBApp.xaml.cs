@@ -10,6 +10,7 @@ using RailwaysDBApp.Properties;
 using RailwaysDBApp.Views;
 using System.Threading;
 using System.Globalization;
+using System.Data.Objects;
 
 namespace RailwaysDBApp
 {
@@ -20,13 +21,12 @@ namespace RailwaysDBApp
     {
 
         //private
-        private void Application_LoadCompleted(object sender, System.Windows.Navigation.NavigationEventArgs e)
-        {
-            RailwaysEntities context = RailwaysData.sharedContext; //инициализация синглтона сущностей БД
-        }
 
         private void Application_Startup(object sender, StartupEventArgs e)
         {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            RailwaysData.FillIds();
+
             string s = Environment.CurrentDirectory;
 
             AppDomain.CurrentDomain.SetData("DataDirectory", s);
@@ -37,7 +37,6 @@ namespace RailwaysDBApp
 
             PermissionManager.LoadPermissionList();
         }
-
 
         //static
         public static void OpenWindow(Window window)

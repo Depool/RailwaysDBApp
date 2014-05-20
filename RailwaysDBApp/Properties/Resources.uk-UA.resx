@@ -171,17 +171,11 @@
   <data name="MainMenu_Name" xml:space="preserve">
     <value>Головне меню</value>
   </data>
-  <data name="MainMenu_Races" xml:space="preserve">
-    <value>Редагувати рейси</value>
-  </data>
   <data name="MainMenu_Routes" xml:space="preserve">
-    <value>Редагувати маршрути</value>
+    <value>Додати маршрути</value>
   </data>
   <data name="MainMenu_Settings" xml:space="preserve">
     <value>Налаштування</value>
-  </data>
-  <data name="MainMenu_Tickets" xml:space="preserve">
-    <value>Одержати квиток</value>
   </data>
   <data name="MainWindow_Go" xml:space="preserve">
     <value>Вперед</value>
@@ -343,7 +337,7 @@
     <value>Виконати запити</value>
   </data>
   <data name="EditDBWindow_DeleteHint" xml:space="preserve">
-    <value>Щоб видалити записи виділіть їх та натисніть delete на клавіатурі</value>
+    <value>Щоб видалити записи, виділіть їх та натисніть delete на клавіатурі</value>
   </data>
   <data name="Queries_CarriageOfTrains" xml:space="preserve">
     <value>Вагони поїздів</value>
@@ -404,5 +398,56 @@
   </data>
   <data name="Report" xml:space="preserve">
     <value>Звіти</value>
+  </data>
+  <data name="AddTrain_CarriagesOfType" xml:space="preserve">
+    <value>Вагонів типу {0}</value>
+  </data>
+  <data name="AddTrain_FindPath" xml:space="preserve">
+    <value>Знайти шлях</value>
+  </data>
+  <data name="AddTrain_From" xml:space="preserve">
+    <value>Звідки:</value>
+  </data>
+  <data name="AddTrain_Name" xml:space="preserve">
+    <value>Додавання поїзда</value>
+  </data>
+  <data name="AddTrain_ProblemsAddingTrain" xml:space="preserve">
+    <value>Під час додавання поїзда сталася помилка</value>
+  </data>
+  <data name="AddTrain_RegisterTrain" xml:space="preserve">
+    <value>Додати поїзд</value>
+  </data>
+  <data name="AddTrain_StationsOnTheWay" xml:space="preserve">
+    <value>Станції на шляху</value>
+  </data>
+  <data name="AddTrain_StopTime" xml:space="preserve">
+    <value>Час зупинки</value>
+  </data>
+  <data name="AddTrain_SuccessfullyAdded" xml:space="preserve">
+    <value>Поїзд додано успішно</value>
+  </data>
+  <data name="AddTrain_To" xml:space="preserve">
+    <value>Куди:</value>
+  </data>
+  <data name="AddTrain_TrainType" xml:space="preserve">
+    <value>Тип поїзда</value>
+  </data>
+  <data name="AddTrain_TrainType_fast" xml:space="preserve">
+    <value>Швидкий</value>
+  </data>
+  <data name="AddTrain_TrainType_high" xml:space="preserve">
+    <value>Швидкісний</value>
+  </data>
+  <data name="AddTrain_TrainType_inter" xml:space="preserve">
+    <value>Інтерсіті</value>
+  </data>
+  <data name="AddTrain_TrainType_usual" xml:space="preserve">
+    <value>Звичайний</value>
+  </data>
+  <data name="MainMenu_BuyTicket" xml:space="preserve">
+    <value>Придбати квиток</value>
+  </data>
+  <data name="AddTrain_CarriagesNeeded" xml:space="preserve">
+    <value>Поїзд повинен мати хоча б 1 вагон</value>
   </data>
 </root>

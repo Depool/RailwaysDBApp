@@ -171,17 +171,11 @@
   <data name="MainMenu_Name" xml:space="preserve">
     <value>Главное меню</value>
   </data>
-  <data name="MainMenu_Races" xml:space="preserve">
-    <value>Редактировать рейсы</value>
-  </data>
   <data name="MainMenu_Routes" xml:space="preserve">
-    <value>Редактировать маршруты</value>
+    <value>Добавить маршруты</value>
   </data>
   <data name="MainMenu_Settings" xml:space="preserve">
     <value>Настройки</value>
-  </data>
-  <data name="MainMenu_Tickets" xml:space="preserve">
-    <value>Получить билет</value>
   </data>
   <data name="MainWindow_Go" xml:space="preserve">
     <value>Вперед</value>
@@ -343,7 +337,7 @@
     <value>Выполнить запросы</value>
   </data>
   <data name="EditDBWindow_DeleteHint" xml:space="preserve">
-    <value>Чтобы удалить записи выделите их и нажмите delete на клавиатуре</value>
+    <value>Чтобы удалить записи, выделите их и нажмите delete на клавиатуре</value>
   </data>
   <data name="Queries_CarriageOfTrains" xml:space="preserve">
     <value>Вагони поездов</value>
@@ -404,5 +398,56 @@
   </data>
   <data name="Report" xml:space="preserve">
     <value>Отчеты</value>
+  </data>
+  <data name="AddTrain_CarriagesOfType" xml:space="preserve">
+    <value>Вагонов типа {0}</value>
+  </data>
+  <data name="AddTrain_FindPath" xml:space="preserve">
+    <value>Найти путь</value>
+  </data>
+  <data name="AddTrain_From" xml:space="preserve">
+    <value>Откуда:</value>
+  </data>
+  <data name="AddTrain_Name" xml:space="preserve">
+    <value>Добавление поезда</value>
+  </data>
+  <data name="AddTrain_ProblemsAddingTrain" xml:space="preserve">
+    <value>Во время добавления поезда произошла ошибка</value>
+  </data>
+  <data name="AddTrain_RegisterTrain" xml:space="preserve">
+    <value>Добавить поезд</value>
+  </data>
+  <data name="AddTrain_StationsOnTheWay" xml:space="preserve">
+    <value>Станции на пути</value>
+  </data>
+  <data name="AddTrain_StopTime" xml:space="preserve">
+    <value>Время остановки</value>
+  </data>
+  <data name="AddTrain_SuccessfullyAdded" xml:space="preserve">
+    <value>Поезд успешно добавлен</value>
+  </data>
+  <data name="AddTrain_To" xml:space="preserve">
+    <value>Куда:</value>
+  </data>
+  <data name="AddTrain_TrainType" xml:space="preserve">
+    <value>Тип поезда</value>
+  </data>
+  <data name="AddTrain_TrainType_fast" xml:space="preserve">
+    <value>Скорый</value>
+  </data>
+  <data name="AddTrain_TrainType_high" xml:space="preserve">
+    <value>Скоростной</value>
+  </data>
+  <data name="AddTrain_TrainType_inter" xml:space="preserve">
+    <value>Интерсити</value>
+  </data>
+  <data name="AddTrain_TrainType_usual" xml:space="preserve">
+    <value>Обычный</value>
+  </data>
+  <data name="MainMenu_BuyTicket" xml:space="preserve">
+    <value>Купить билет</value>
+  </data>
+  <data name="AddTrain_CarriagesNeeded" xml:space="preserve">
+    <value>Поезд должен иметь хотя бы 1 вагон</value>
   </data>
 </root>

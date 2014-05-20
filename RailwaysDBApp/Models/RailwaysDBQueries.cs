@@ -336,12 +336,12 @@ namespace RailwaysDBApp.Models
                 return result;
             }
 
-            List<TrainIDAndStopNum> trains = context.ExecuteStoreQuery<TrainIDAndStopNum>("select TRAIN_ID,STOP_NUMBER,sn from(\n"+
-                                                                                          "select TRAIN_ID,STOP_NUMBER from STOPS where STATION_ID={0}) as one\n"+
-                                                                                          "inner join\n"+
-                                                                                          "(select id,sn from(\n"+
-                                                                                          "select TRAIN_ID as id,STOP_NUMBER as sn from STOPS where STATION_ID={1})) as two\n"+
-                                                                                          "on one.TRAIN_ID=id",sID[0],fID[0]).ToList();
+            List<TrainIDAndStopNum> trains = context.ExecuteStoreQuery<TrainIDAndStopNum>("select one.TRAIN_ID,one.STOP_NUMBER,sn from(\n" +
+                                                                                          "select STOPS.TRAIN_ID,STOPS.STOP_NUMBER from STOPS where STATION_ID={0}) one\n" +
+                                                                                           "inner join\n" +
+                                                                                           "(select two.TRAIN_ID,two.STOP_NUMBER as sn from(\n" +
+                                                                                           "select STOPS.TRAIN_ID,STOPS.STOP_NUMBER from STOPS where STATION_ID={1}) two) three\n" +
+                                                                                           "on one.TRAIN_ID=three.TRAIN_ID", sID[0], fID[0]).ToList();
             foreach (TrainIDAndStopNum tr in trains)
             {
                 string condition = String.Empty;

@@ -16,24 +16,6 @@
         <StackPanel Orientation="Vertical" 
                     VerticalAlignment="Center">
 
-                <Button Name="Tickets"
-                        Content="{Loc MainMenu_Tickets}"
-                        Click="Tickets_Click"
-                        Tag="user"
-                        Height="0"
-                        />
-
-                <Button Name="Routes"
-                        Content="{Loc MainMenu_Routes}"
-                        Click="Routes_Click"
-                        Height="0"
-                        Tag="manager"/>
-                <Button Name="Races"
-                        Content="{Loc MainMenu_Races}"
-                        Click="Races_Click"
-                        Tag="manager"
-                        Height="0"
-                        />
                 <Button Name="Queries"
                         Content="{Loc MainMenu_Queries}"
                         Click="Queries_Click"
@@ -43,7 +25,7 @@
                         Content="{Loc MainMenu_Reports}"
                         Click="Reports_Click"
                         Tag="user"
-                        Margin="0 0 0 0"
+                        Margin="0 0 0 10"
                         />
                 <Button Name="AddUser"
                         Content="{Loc MainMenu_AddUser}"
@@ -54,8 +36,19 @@
                         Content="{Loc MainMenu_EditTables}"
                         Click="EditTables_Click"
                         Tag="admin"
+                        Margin="0 0 0 0"/>
+                <Button Name="Routes"
+                        Content="{Loc MainMenu_Routes}"
+                        Click="Routes_Click"
+                        Tag="manager"
+                        Margin="0 0 0 0"/>
+                <Button Name="BuyTicket"
+                        Content="{Loc MainMenu_BuyTicket}"
+                        Click="BuyTicket_Click"
+                        Tag="user"
                         Margin="0 0 0 15"/>
-                <Button Name="Settings"
+
+            <Button Name="Settings"
                         Content="{Loc MainMenu_Settings}"
                         Click="Settings_Click"
                         Tag="user"

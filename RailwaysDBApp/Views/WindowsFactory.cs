@@ -16,6 +16,8 @@ namespace RailwaysDBApp.Views
         private static RailwaysDBAppAddNewUser addNewUser = null;
         private static RailwaysDBAppMainWindow loginWindow = null;
         private static RailwaysDBAppQueriesWindow queriesWindow = null;
+        private static RailwaysDBAppAddTrainWindow addTrainWindow = null;
+        private static RailwaysDBAppBuyTicketWindow buyTicketWindow = null;
         
 
         //static properties
@@ -127,6 +129,41 @@ namespace RailwaysDBApp.Views
                 return queriesWindow;
             }
         }
+
+        public static RailwaysDBAppAddTrainWindow AddTrainWindow
+        {
+            get
+            {
+                if (addTrainWindow == null || !addTrainWindow.IsVisible)
+                {
+                    if (addTrainWindow != null)
+                    {
+                        windows.Remove(addTrainWindow);
+                    }
+                    addTrainWindow = new RailwaysDBAppAddTrainWindow();
+                    windows.Add(addTrainWindow);
+                }
+                return addTrainWindow;
+            }
+        }
+
+        public static RailwaysDBAppBuyTicketWindow BuyTicketWindow
+        {
+            get
+            {
+                if (buyTicketWindow == null || !buyTicketWindow.IsVisible)
+                {
+                    if (buyTicketWindow != null)
+                    {
+                        windows.Remove(buyTicketWindow);
+                    }
+                    buyTicketWindow = new RailwaysDBAppBuyTicketWindow();
+                    windows.Add(buyTicketWindow);
+                }
+                return buyTicketWindow;
+            }
+        }
+
 
         //static methods
         public static void HideOpenedWindows()

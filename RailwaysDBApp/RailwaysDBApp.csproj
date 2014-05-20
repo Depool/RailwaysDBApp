@@ -108,6 +108,12 @@
       <DependentUpon>TrainsDestinationReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\RailwaysDBAppAddTrainWindow.xaml.cs">
+      <DependentUpon>RailwaysDBAppAddTrainWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RailwaysDBAppBuyTicketWindow.xaml.cs">
+      <DependentUpon>RailwaysDBAppBuyTicketWindow.xaml</DependentUpon>
+    </Compile>
     <Compile Include="Views\reportDisplayForm.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -134,6 +140,14 @@
     </Compile>
     <Compile Include="Views\WindowsFactory.cs" />
     <Page Include="Views\RailwaysDBAppAddNewUser.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RailwaysDBAppAddTrainWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RailwaysDBAppBuyTicketWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>

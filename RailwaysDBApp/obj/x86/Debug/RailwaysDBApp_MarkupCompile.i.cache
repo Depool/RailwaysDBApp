@@ -10,11 +10,11 @@ none
 false
 DEBUG;TRACE
 C:\Users\Depool\Documents\Visual Studio 2010\Projects\RailwaysDBApp\RailwaysDBApp\RailwaysDBApp.xaml
-6-1508302828
+8-2119241003
 
-26724133560
+28-1183333645
 25-1832559040
-Views\RailwaysDBAppAddNewUser.xaml;Views\RailwaysDBAppEditDBWindow.xaml;Views\RailwaysDBAppMainMenu.xaml;Views\RailwaysDBAppMainWindow.xaml;Views\RailwaysDBAppQueriesWindow.xaml;Views\RailwaysDBAppSettingsWindow.xaml;
+Views\RailwaysDBAppAddNewUser.xaml;Views\RailwaysDBAppAddTrainWindow.xaml;Views\RailwaysDBAppBuyTicketWindow.xaml;Views\RailwaysDBAppEditDBWindow.xaml;Views\RailwaysDBAppMainMenu.xaml;Views\RailwaysDBAppMainWindow.xaml;Views\RailwaysDBAppQueriesWindow.xaml;Views\RailwaysDBAppSettingsWindow.xaml;
 
 False
 

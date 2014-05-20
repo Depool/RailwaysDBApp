@@ -30,19 +30,9 @@ namespace RailwaysDBApp.Views
             App.OpenWindow(WindowsFactory.Settings);
         }
 
-        private void Tickets_Click(object sender, RoutedEventArgs e)
-        {
-
-        }
-
         private void Routes_Click(object sender, RoutedEventArgs e)
         {
-
-        }
-
-        private void Races_Click(object sender, RoutedEventArgs e)
-        {
-
+            App.OpenWindow(WindowsFactory.AddTrainWindow);
         }
 
         private void EditTables_Click(object sender, RoutedEventArgs e)
@@ -81,6 +71,11 @@ namespace RailwaysDBApp.Views
         {
             reportDisplayForm form = new reportDisplayForm();
             form.Show();
+        }
+
+        private void BuyTicket_Click(object sender, RoutedEventArgs e)
+        {
+            App.OpenWindow(WindowsFactory.BuyTicketWindow);
         }
     }
 }
