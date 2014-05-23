@@ -54,7 +54,7 @@ namespace RailwaysDBApp.Views
 
         private void ChangeUser_Click(object sender, RoutedEventArgs e)
         {
-            App.OpenMainWindow();
+            App.OpenMainWindow(this);
         }
 
         private void Window_Closed(object sender, EventArgs e)

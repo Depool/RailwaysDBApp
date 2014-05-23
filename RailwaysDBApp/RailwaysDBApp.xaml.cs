@@ -47,13 +47,13 @@ namespace RailwaysDBApp
                 window.Activate();
         }
 
-        public static void OpenMainWindow()
+        public static void OpenMainWindow(RailwaysDBAppMainMenu mainMenu)
         {
             WindowsFactory.HideOpenedWindows();
             RailwaysDBAppMainWindow main = WindowsFactory.LoginWindow;
             App.OpenWindow(main);
             WindowsFactory.CloseHiddenWindows();
-            WindowsFactory.MainMenu.Close();
+            mainMenu.Close();
         }
 
     }

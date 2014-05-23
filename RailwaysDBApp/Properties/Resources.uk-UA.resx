@@ -450,4 +450,88 @@
   <data name="AddTrain_CarriagesNeeded" xml:space="preserve">
     <value>Поїзд повинен мати хоча б 1 вагон</value>
   </data>
+  <data name="EDGES_PASS_PRICE" xml:space="preserve">
+    <value>Вартість проїзду</value>
+  </data>
+  <data name="BuyTicket_AppropriateRaces" xml:space="preserve">
+    <value>Відповідні рейси</value>
+  </data>
+  <data name="BuyTicket_Buy" xml:space="preserve">
+    <value>Придбати</value>
+  </data>
+  <data name="BuyTicket_Carriage" xml:space="preserve">
+    <value>Вагон</value>
+  </data>
+  <data name="BuyTicket_CarriageNumber" xml:space="preserve">
+    <value>Вагон</value>
+  </data>
+  <data name="BuyTicket_CarriageType" xml:space="preserve">
+    <value>Тип вагону</value>
+  </data>
+  <data name="BuyTicket_CarriageType_CP" xml:space="preserve">
+    <value>Купе</value>
+  </data>
+  <data name="BuyTicket_CarriageType_PK" xml:space="preserve">
+    <value>Плацкарт</value>
+  </data>
+  <data name="BuyTicket_CarriageType_SV" xml:space="preserve">
+    <value>Спальний вагон</value>
+  </data>
+  <data name="BuyTicket_ChooseDate" xml:space="preserve">
+    <value>Виберіть дату</value>
+  </data>
+  <data name="BuyTicket_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="BuyTicket_DifferentStations" xml:space="preserve">
+    <value>Станції мають бути різними</value>
+  </data>
+  <data name="BuyTicket_Error" xml:space="preserve">
+    <value>Під час виконання операції сталася помилка</value>
+  </data>
+  <data name="BuyTicket_FindRaces" xml:space="preserve">
+    <value>Пошук</value>
+  </data>
+  <data name="BuyTicket_FreePlaces" xml:space="preserve">
+    <value>{0} ({1} вільн. місць)</value>
+  </data>
+  <data name="BuyTicket_From" xml:space="preserve">
+    <value>Звідки</value>
+  </data>
+  <data name="BuyTicket_Name" xml:space="preserve">
+    <value>Придбати квиток</value>
+  </data>
+  <data name="BuyTicket_NoAppropriateRaces" xml:space="preserve">
+    <value>Немає відповідних рейсів</value>
+  </data>
+  <data name="BuyTicket_NoFreeCarriages" xml:space="preserve">
+    <value>Немає вільних вагонів</value>
+  </data>
+  <data name="BuyTicket_OffTime" xml:space="preserve">
+    <value>Прибуття</value>
+  </data>
+  <data name="BuyTicket_OnTime" xml:space="preserve">
+    <value>Відправлення</value>
+  </data>
+  <data name="BuyTicket_Place" xml:space="preserve">
+    <value>Місце</value>
+  </data>
+  <data name="BuyTicket_PlaceNumber" xml:space="preserve">
+    <value>Місце</value>
+  </data>
+  <data name="BuyTicket_Price" xml:space="preserve">
+    <value>Вартість</value>
+  </data>
+  <data name="BuyTicket_Race" xml:space="preserve">
+    <value>Номер поїзда: {0} - {1} (відправлення з {2}: {3}) - (прибуття в {4}: {5}) {6}</value>
+  </data>
+  <data name="BuyTicket_Success" xml:space="preserve">
+    <value>Операція виконана</value>
+  </data>
+  <data name="BuyTicket_To" xml:space="preserve">
+    <value>Куди</value>
+  </data>
+  <data name="BuyTicket_TrainId" xml:space="preserve">
+    <value>Номер поїзда</value>
+  </data>
 </root>

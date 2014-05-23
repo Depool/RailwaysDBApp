@@ -169,7 +169,7 @@ namespace RailwaysDBApp.Views
         public static void HideOpenedWindows()
         {
             foreach (Window window in windows)
-                if (window.IsVisible)
+                if (window.IsVisible && window.GetType() != typeof(RailwaysDBAppMainMenu))
                     window.Hide();
         }
 
@@ -183,7 +183,7 @@ namespace RailwaysDBApp.Views
         public static void CloseAllWindows()
         {
             foreach (Window window in windows)
-                if (window.IsVisible && window.GetType() != typeof(RailwaysDBAppMainWindow))
+                if ((window.IsVisible && window.GetType() != typeof(RailwaysDBAppMainWindow)))
                     window.Close();
         }
 

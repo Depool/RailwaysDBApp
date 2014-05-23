@@ -331,6 +331,249 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Appropriate races.
+        /// </summary>
+        internal static string BuyTicket_AppropriateRaces {
+            get {
+                return ResourceManager.GetString("BuyTicket_AppropriateRaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy.
+        /// </summary>
+        internal static string BuyTicket_Buy {
+            get {
+                return ResourceManager.GetString("BuyTicket_Buy", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage.
+        /// </summary>
+        internal static string BuyTicket_Carriage {
+            get {
+                return ResourceManager.GetString("BuyTicket_Carriage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage number.
+        /// </summary>
+        internal static string BuyTicket_CarriageNumber {
+            get {
+                return ResourceManager.GetString("BuyTicket_CarriageNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage type.
+        /// </summary>
+        internal static string BuyTicket_CarriageType {
+            get {
+                return ResourceManager.GetString("BuyTicket_CarriageType", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Compartment.
+        /// </summary>
+        internal static string BuyTicket_CarriageType_CP {
+            get {
+                return ResourceManager.GetString("BuyTicket_CarriageType_CP", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Reserved seat.
+        /// </summary>
+        internal static string BuyTicket_CarriageType_PK {
+            get {
+                return ResourceManager.GetString("BuyTicket_CarriageType_PK", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Sleeping compartment.
+        /// </summary>
+        internal static string BuyTicket_CarriageType_SV {
+            get {
+                return ResourceManager.GetString("BuyTicket_CarriageType_SV", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Choose the date.
+        /// </summary>
+        internal static string BuyTicket_ChooseDate {
+            get {
+                return ResourceManager.GetString("BuyTicket_ChooseDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date.
+        /// </summary>
+        internal static string BuyTicket_Date {
+            get {
+                return ResourceManager.GetString("BuyTicket_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Stations must be different.
+        /// </summary>
+        internal static string BuyTicket_DifferentStations {
+            get {
+                return ResourceManager.GetString("BuyTicket_DifferentStations", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на An error occured while completing operation.
+        /// </summary>
+        internal static string BuyTicket_Error {
+            get {
+                return ResourceManager.GetString("BuyTicket_Error", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Find.
+        /// </summary>
+        internal static string BuyTicket_FindRaces {
+            get {
+                return ResourceManager.GetString("BuyTicket_FindRaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на {0} ({1} free places).
+        /// </summary>
+        internal static string BuyTicket_FreePlaces {
+            get {
+                return ResourceManager.GetString("BuyTicket_FreePlaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на From.
+        /// </summary>
+        internal static string BuyTicket_From {
+            get {
+                return ResourceManager.GetString("BuyTicket_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Buy ticket.
+        /// </summary>
+        internal static string BuyTicket_Name {
+            get {
+                return ResourceManager.GetString("BuyTicket_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No appropriate races.
+        /// </summary>
+        internal static string BuyTicket_NoAppropriateRaces {
+            get {
+                return ResourceManager.GetString("BuyTicket_NoAppropriateRaces", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на No free carriages.
+        /// </summary>
+        internal static string BuyTicket_NoFreeCarriages {
+            get {
+                return ResourceManager.GetString("BuyTicket_NoFreeCarriages", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Off time.
+        /// </summary>
+        internal static string BuyTicket_OffTime {
+            get {
+                return ResourceManager.GetString("BuyTicket_OffTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на On time.
+        /// </summary>
+        internal static string BuyTicket_OnTime {
+            get {
+                return ResourceManager.GetString("BuyTicket_OnTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Place.
+        /// </summary>
+        internal static string BuyTicket_Place {
+            get {
+                return ResourceManager.GetString("BuyTicket_Place", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Place number.
+        /// </summary>
+        internal static string BuyTicket_PlaceNumber {
+            get {
+                return ResourceManager.GetString("BuyTicket_PlaceNumber", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Price.
+        /// </summary>
+        internal static string BuyTicket_Price {
+            get {
+                return ResourceManager.GetString("BuyTicket_Price", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train number: {0} - {1} (departure from {2} at {3}) - (arrival to {4} at {5}) {6}.
+        /// </summary>
+        internal static string BuyTicket_Race {
+            get {
+                return ResourceManager.GetString("BuyTicket_Race", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Operation successfull.
+        /// </summary>
+        internal static string BuyTicket_Success {
+            get {
+                return ResourceManager.GetString("BuyTicket_Success", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To.
+        /// </summary>
+        internal static string BuyTicket_To {
+            get {
+                return ResourceManager.GetString("BuyTicket_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train #.
+        /// </summary>
+        internal static string BuyTicket_TrainId {
+            get {
+                return ResourceManager.GetString("BuyTicket_TrainId", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Types of carriages.
         /// </summary>
         internal static string CARRIAGE_TYPE {
@@ -444,6 +687,15 @@ namespace RailwaysDBApp.Properties {
         internal static string EDGES_ID {
             get {
                 return ResourceManager.GetString("EDGES_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Pass price.
+        /// </summary>
+        internal static string EDGES_PASS_PRICE {
+            get {
+                return ResourceManager.GetString("EDGES_PASS_PRICE", resourceCulture);
             }
         }
         

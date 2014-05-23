@@ -217,14 +217,19 @@ namespace RailwaysDBApp.Models
             {
                 List<int> ids = context.ExecuteStoreQuery<int>("select STOPS.STATION_ID\n" +
                                                                 "from STOPS\n" +
-                                                                "where STOPS.TRAIN_ID={0} And (STOPS.STOP_NUMBER={1} Or STOPS.STOP_NUMBER={2})\n", h.ID, h.MIN, h.MAX).ToList();
+                                                                "where STOPS.TRAIN_ID={0} And (STOPS.STOP_NUMBER={1} Or STOPS.STOP_NUMBER={2})\n"+
+                                                                "order by STOPS.STOP_NUMBER\n", h.ID, h.MIN, h.MAX).ToList();
                 int mn = ids[0];
                 int mx = ids[1];
                 List<string> names = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
                                                                         "from STATIONS\n" +
-                                                                        "where STATIONS.ID={0} or STATIONS.ID={1}\n", mn, mx).ToList();
+                                                                        "where STATIONS.ID={0}\n", mn).ToList();
                 TrainDestinations dest = new TrainDestinations();
-                dest.ID = h.ID; dest.start = names[0]; dest.finish = names[1];
+                dest.ID = h.ID; dest.start = names[0];
+                names = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
+                                                          "from STATIONS\n" +
+                                                          "where STATIONS.ID={0}\n", mx).ToList();
+                dest.finish = names[0];
                 res.Add(dest);
             }
             return res;
@@ -267,6 +272,19 @@ namespace RailwaysDBApp.Models
                                                                                 "from RACES\n" +
                                                                                 "where TRAIN_ID={0}\n", id).ToList();
             return res;
+        }
+
+        public static short? GetStopNumberByTrainAndStationId(int trainId, int stationId)
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+
+            List<short> result = context.ExecuteStoreQuery<short>("SELECT STOP_NUMBER\n" +
+                                                                  "FROM STOPS\n" +
+                                                                  "WHERE TRAIN_ID={0} AND STATION_ID={1}", trainId, stationId).ToList();
+            if (result.Count == 0)
+                return null;
+            else
+                return result[0];
         }
 
         public static List<TicketsForRace> GetTicketsForRace(int id)
@@ -370,6 +388,17 @@ namespace RailwaysDBApp.Models
             List<TrainsDestinationHelp> help = GetTrainDestinationsHelp(filter);
             result = GetTrainDestinationsByHelpInfo(help);
             return result;
+        }
+
+        public static TrainDestinations GetOneTrainDestination(int id)
+        {
+            List<TrainsDestinationHelp> help = GetTrainDestinationsHelp(String.Format("And TRAINS.ID={0}",id));
+            List<TrainDestinations> result = GetTrainDestinationsByHelpInfo(help);
+
+            if (result.Count != 1)
+                throw new ApplicationException("Something wrong. One train can`t have not one destinations value");
+            else
+                return result[0];
         }
 
 

@@ -457,4 +457,88 @@
   <data name="AddTrain_CarriagesNeeded" xml:space="preserve">
     <value>The train must have at least one carriage</value>
   </data>
+  <data name="EDGES_PASS_PRICE" xml:space="preserve">
+    <value>Pass price</value>
+  </data>
+  <data name="BuyTicket_AppropriateRaces" xml:space="preserve">
+    <value>Appropriate races</value>
+  </data>
+  <data name="BuyTicket_Buy" xml:space="preserve">
+    <value>Buy</value>
+  </data>
+  <data name="BuyTicket_Carriage" xml:space="preserve">
+    <value>Carriage</value>
+  </data>
+  <data name="BuyTicket_CarriageNumber" xml:space="preserve">
+    <value>Carriage number</value>
+  </data>
+  <data name="BuyTicket_CarriageType" xml:space="preserve">
+    <value>Carriage type</value>
+  </data>
+  <data name="BuyTicket_CarriageType_CP" xml:space="preserve">
+    <value>Compartment</value>
+  </data>
+  <data name="BuyTicket_CarriageType_PK" xml:space="preserve">
+    <value>Reserved seat</value>
+  </data>
+  <data name="BuyTicket_CarriageType_SV" xml:space="preserve">
+    <value>Sleeping compartment</value>
+  </data>
+  <data name="BuyTicket_ChooseDate" xml:space="preserve">
+    <value>Choose the date</value>
+  </data>
+  <data name="BuyTicket_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="BuyTicket_DifferentStations" xml:space="preserve">
+    <value>Stations must be different</value>
+  </data>
+  <data name="BuyTicket_Error" xml:space="preserve">
+    <value>An error occured while completing operation</value>
+  </data>
+  <data name="BuyTicket_FindRaces" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="BuyTicket_FreePlaces" xml:space="preserve">
+    <value>{0} ({1} free places)</value>
+  </data>
+  <data name="BuyTicket_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="BuyTicket_Name" xml:space="preserve">
+    <value>Buy ticket</value>
+  </data>
+  <data name="BuyTicket_NoAppropriateRaces" xml:space="preserve">
+    <value>No appropriate races</value>
+  </data>
+  <data name="BuyTicket_NoFreeCarriages" xml:space="preserve">
+    <value>No free carriages</value>
+  </data>
+  <data name="BuyTicket_OffTime" xml:space="preserve">
+    <value>Off time</value>
+  </data>
+  <data name="BuyTicket_OnTime" xml:space="preserve">
+    <value>On time</value>
+  </data>
+  <data name="BuyTicket_Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="BuyTicket_PlaceNumber" xml:space="preserve">
+    <value>Place number</value>
+  </data>
+  <data name="BuyTicket_Price" xml:space="preserve">
+    <value>Price</value>
+  </data>
+  <data name="BuyTicket_Race" xml:space="preserve">
+    <value>Train number: {0} - {1} (departure from {2} at {3}) - (arrival to {4} at {5}) {6}</value>
+  </data>
+  <data name="BuyTicket_Success" xml:space="preserve">
+    <value>Operation successfull</value>
+  </data>
+  <data name="BuyTicket_To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="BuyTicket_TrainId" xml:space="preserve">
+    <value>Train #</value>
+  </data>
 </root>
