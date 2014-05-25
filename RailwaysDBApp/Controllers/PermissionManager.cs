@@ -13,6 +13,7 @@ namespace RailwaysDBApp.Controllers
         //private
         private static List<PERMISSION_TYPE> permissionTypes;
         private static int permissionID = int.MinValue;
+        public static string USER = null;
 
         private static int getPermissionID(string permissionTag)
         {

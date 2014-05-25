@@ -25,7 +25,7 @@
                         Content="{Loc MainMenu_Reports}"
                         Click="Reports_Click"
                         Tag="user"
-                        Margin="0 0 0 10"
+                        Margin="0 0 0 15"
                         />
                 <Button Name="AddUser"
                         Content="{Loc MainMenu_AddUser}"
@@ -37,12 +37,23 @@
                         Click="EditTables_Click"
                         Tag="admin"
                         Margin="0 0 0 0"/>
+                <Button Name="Logging"
+                        Content="{Loc MainMenu_Logging}"
+                        Click="Logging_Click"
+                        Tag="admin"
+                        Margin="0 0 0 0"/>
                 <Button Name="Routes"
                         Content="{Loc MainMenu_Routes}"
                         Click="Routes_Click"
                         Tag="manager"
+                        Margin="0 0 0 15"/>
+
+                <Button Name="RemoveTicket"
+                        Content="{Loc MainMenu_RemoveTicket}"
+                        Click="RemoveTicket_Click"
+                        Tag="manager"
                         Margin="0 0 0 0"/>
-                <Button Name="BuyTicket"
+            <Button Name="BuyTicket"
                         Content="{Loc MainMenu_BuyTicket}"
                         Click="BuyTicket_Click"
                         Tag="user"

@@ -68,12 +68,37 @@
     <Reference Include="WpfLocalization">
       <HintPath>..\dll\WpfLocalization.dll</HintPath>
     </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock">
+      <HintPath>..\dll\Xceed.Wpf.AvalonDock.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Aero">
+      <HintPath>..\dll\Xceed.Wpf.AvalonDock.Themes.Aero.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.Metro">
+      <HintPath>..\dll\Xceed.Wpf.AvalonDock.Themes.Metro.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.AvalonDock.Themes.VS2010">
+      <HintPath>..\dll\Xceed.Wpf.AvalonDock.Themes.VS2010.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.DataGrid">
+      <HintPath>..\dll\Xceed.Wpf.DataGrid.dll</HintPath>
+    </Reference>
+    <Reference Include="Xceed.Wpf.Toolkit">
+      <HintPath>..\dll\Xceed.Wpf.Toolkit.dll</HintPath>
+    </Reference>
   </ItemGroup>
   <ItemGroup>
     <ApplicationDefinition Include="RailwaysDBApp.xaml">
       <Generator>MSBuild:Compile</Generator>
       <SubType>Designer</SubType>
     </ApplicationDefinition>
+    <Compile Include="Controllers\LoggingManager.cs" />
+    <Compile Include="Reports\AdjacentStationsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>AdjacentStationsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\CarriagesOfTrainsReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -102,6 +127,30 @@
       <DesignTime>True</DesignTime>
       <DependentUpon>Resources.uk-UA.resx</DependentUpon>
     </Compile>
+    <Compile Include="Reports\ProfitsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>ProfitsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\RacesAndTicketsReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>RacesAndTicketsReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TicketReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TicketReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Reports\TrainsAndRacesReport.cs">
+      <AutoGen>True</AutoGen>
+      <DesignTime>True</DesignTime>
+      <DependentUpon>TrainsAndRacesReport.rpt</DependentUpon>
+      <SubType>Component</SubType>
+    </Compile>
     <Compile Include="Reports\TrainsDestinationReport.cs">
       <AutoGen>True</AutoGen>
       <DesignTime>True</DesignTime>
@@ -113,6 +162,9 @@
     </Compile>
     <Compile Include="Views\RailwaysDBAppBuyTicketWindow.xaml.cs">
       <DependentUpon>RailwaysDBAppBuyTicketWindow.xaml</DependentUpon>
+    </Compile>
+    <Compile Include="Views\RailwaysDBAppLogWindow.xaml.cs">
+      <DependentUpon>RailwaysDBAppLogWindow.xaml</DependentUpon>
     </Compile>
     <Compile Include="Views\reportDisplayForm.cs">
       <SubType>Form</SubType>
@@ -138,6 +190,12 @@
       <DependentUpon>TrainsThroughStationReport.rpt</DependentUpon>
       <SubType>Component</SubType>
     </Compile>
+    <Compile Include="Views\TicketDisplayForm.cs">
+      <SubType>Form</SubType>
+    </Compile>
+    <Compile Include="Views\TicketDisplayForm.Designer.cs">
+      <DependentUpon>TicketDisplayForm.cs</DependentUpon>
+    </Compile>
     <Compile Include="Views\WindowsFactory.cs" />
     <Page Include="Views\RailwaysDBAppAddNewUser.xaml">
       <SubType>Designer</SubType>
@@ -152,6 +210,10 @@
       <Generator>MSBuild:Compile</Generator>
     </Page>
     <Page Include="Views\RailwaysDBAppEditDBWindow.xaml">
+      <SubType>Designer</SubType>
+      <Generator>MSBuild:Compile</Generator>
+    </Page>
+    <Page Include="Views\RailwaysDBAppLogWindow.xaml">
       <SubType>Designer</SubType>
       <Generator>MSBuild:Compile</Generator>
     </Page>
@@ -216,6 +278,10 @@
     <AppDesigner Include="Properties\" />
   </ItemGroup>
   <ItemGroup>
+    <EmbeddedResource Include="Reports\AdjacentStationsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>AdjacentStationsReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\CarriagesOfTrainsReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>CarriagesOfTrainsReport.cs</LastGenOutput>
@@ -229,6 +295,22 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.uk-UA.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+    <EmbeddedResource Include="Reports\ProfitsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>ProfitsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\RacesAndTicketsReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>RacesAndTicketsReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TicketReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TicketReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Reports\TrainsAndRacesReport.rpt">
+      <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
+      <LastGenOutput>TrainsAndRacesReport.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Include="Reports\TrainsDestinationReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TrainsDestinationReport.cs</LastGenOutput>
@@ -239,6 +321,9 @@
     <EmbeddedResource Include="Reports\TrainsThroughStationReport.rpt">
       <Generator>CrystalDecisions.VSDesigner.CodeGen.ReportCodeGenerator</Generator>
       <LastGenOutput>TrainsThroughStationReport.cs</LastGenOutput>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Views\TicketDisplayForm.resx">
+      <DependentUpon>TicketDisplayForm.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <ItemGroup>

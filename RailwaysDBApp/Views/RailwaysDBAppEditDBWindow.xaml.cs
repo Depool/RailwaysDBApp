@@ -66,7 +66,7 @@ namespace RailwaysDBApp.Views
             var selectedItem = TablesComboBox.SelectedItem as ComboBoxItem;
             RailwaysEntities context = RailwaysData.sharedContext;
             string tableName = selectedItem.Tag as string;
-
+            
             if (tableName!= null)
             {
                 curTableName = tableName;
@@ -86,18 +86,19 @@ namespace RailwaysDBApp.Views
                     
                 for (int i = DataTab.Columns.Count - 1; i >= numberOfDomains; --i)
                          DataTab.Columns.RemoveAt(i);
-                for (int i = DataTab.Columns.Count - 1;i >= 0; --i)
-                    if ((DataTab.Columns[i].Header as string) == "ID")
-                        DataTab.Columns.RemoveAt(i);
 
                 columnsOriginalHeaders.Clear();
                 foreach (DataGridColumn column in DataTab.Columns)
                 {
+                     column.IsReadOnly = curTableName == "TICKETS" || curTableName == "LOGTABLE"
+                                        || curTableName == "LOGGINGACTIONS" || (column.Header as string) == "ID";
                      columnsOriginalHeaders.Add((string)column.Header);
                      column.Header = TypesConverter.GetResource(curTableName + "_" + (column.Header as string));
                 }
+
+                if (curTableName != "LOGTABLE" && curTableName != "LOGGINGACTIONS")
+                    LoggingManager.LogAction(3, curTableName);
               }
-              
           }
 
         private void DataTab_SelectionChanged(object sender, SelectionChangedEventArgs e)
@@ -119,6 +120,10 @@ namespace RailwaysDBApp.Views
 
         private void removeRecords()
         {
+            if (curTableName == "TICKETS" || curTableName == "LOGTABLE"
+                || curTableName == "LOGGINGACTIONS")
+                return;
+
             RailwaysEntities context = RailwaysData.sharedContext;
             object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
 
@@ -135,6 +140,7 @@ namespace RailwaysDBApp.Views
             try
             {
                 context.SaveChanges();
+                LoggingManager.LogAction(4, curTableName);
             }
             catch (Exception ex)
             {
@@ -178,6 +184,7 @@ namespace RailwaysDBApp.Views
         private void DataTab_RowEditEnding(object sender, DataGridRowEditEndingEventArgs e)
         {
             RailwaysEntities context = RailwaysData.sharedContext;
+            bool adding = false;
             try
             {
                 object entities = context.GetType().GetProperty(curTableName).GetValue(context, null);
@@ -203,6 +210,7 @@ namespace RailwaysDBApp.Views
 
                 MethodInfo mListAdd = entities.GetType().GetMethod("AddObject");
                 mListAdd.Invoke(entities, new object[] { dataContext });
+                adding = true;
             }
             catch { }
            
@@ -210,6 +218,7 @@ namespace RailwaysDBApp.Views
             {
                 context.SaveChanges();
                 context.AcceptAllChanges();
+                LoggingManager.LogAction(adding ? 6 : 5, curTableName);
             }
             catch (Exception ex)
             {

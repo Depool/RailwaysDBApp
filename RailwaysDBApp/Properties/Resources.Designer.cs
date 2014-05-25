@@ -430,6 +430,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Too late to buy tickets for this date.
+        /// </summary>
+        internal static string BuyTicket_EalryDate {
+            get {
+                return ResourceManager.GetString("BuyTicket_EalryDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на An error occured while completing operation.
         /// </summary>
         internal static string BuyTicket_Error {
@@ -736,6 +745,123 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Finish time.
+        /// </summary>
+        internal static string Logging_FinishTime {
+            get {
+                return ResourceManager.GetString("Logging_FinishTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Logging.
+        /// </summary>
+        internal static string Logging_Name {
+            get {
+                return ResourceManager.GetString("Logging_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Search.
+        /// </summary>
+        internal static string Logging_Search {
+            get {
+                return ResourceManager.GetString("Logging_Search", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Starting time.
+        /// </summary>
+        internal static string Logging_StartingTime {
+            get {
+                return ResourceManager.GetString("Logging_StartingTime", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Logging actions.
+        /// </summary>
+        internal static string LOGGINGACTIONS {
+            get {
+                return ResourceManager.GetString("LOGGINGACTIONS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Desctription of an action.
+        /// </summary>
+        internal static string LOGGINGACTIONS_DESCRIPTION {
+            get {
+                return ResourceManager.GetString("LOGGINGACTIONS_DESCRIPTION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Id of an action.
+        /// </summary>
+        internal static string LOGGINGACTIONS_ID {
+            get {
+                return ResourceManager.GetString("LOGGINGACTIONS_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Log.
+        /// </summary>
+        internal static string LOGTABLE {
+            get {
+                return ResourceManager.GetString("LOGTABLE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Argument of an action.
+        /// </summary>
+        internal static string LOGTABLE_ACTION_ARGUMENT {
+            get {
+                return ResourceManager.GetString("LOGTABLE_ACTION_ARGUMENT", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of action in table of logging actions.
+        /// </summary>
+        internal static string LOGTABLE_ACTION_ID {
+            get {
+                return ResourceManager.GetString("LOGTABLE_ACTION_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Time of the action.
+        /// </summary>
+        internal static string LOGTABLE_ACTION_TIME {
+            get {
+                return ResourceManager.GetString("LOGTABLE_ACTION_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of the record.
+        /// </summary>
+        internal static string LOGTABLE_ID {
+            get {
+                return ResourceManager.GetString("LOGTABLE_ID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на User commited action.
+        /// </summary>
+        internal static string LOGTABLE_USERNAME {
+            get {
+                return ResourceManager.GetString("LOGTABLE_USERNAME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Add user.
         /// </summary>
         internal static string MainMenu_AddUser {
@@ -772,6 +898,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Logging.
+        /// </summary>
+        internal static string MainMenu_Logging {
+            get {
+                return ResourceManager.GetString("MainMenu_Logging", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Main menu.
         /// </summary>
         internal static string MainMenu_Name {
@@ -786,6 +921,15 @@ namespace RailwaysDBApp.Properties {
         internal static string MainMenu_Queries {
             get {
                 return ResourceManager.GetString("MainMenu_Queries", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Return a ticket.
+        /// </summary>
+        internal static string MainMenu_RemoveTicket {
+            get {
+                return ResourceManager.GetString("MainMenu_RemoveTicket", resourceCulture);
             }
         }
         
@@ -862,6 +1006,24 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Tickets sold.
+        /// </summary>
+        internal static string ProfitRecord_Amount {
+            get {
+                return ResourceManager.GetString("ProfitRecord_Amount", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Money earned(grn.).
+        /// </summary>
+        internal static string ProfitRecord_Profit {
+            get {
+                return ResourceManager.GetString("ProfitRecord_Profit", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Adjacent stations.
         /// </summary>
         internal static string Queries_AdjacentStations {
@@ -930,6 +1092,15 @@ namespace RailwaysDBApp.Properties {
         internal static string Queries_NoResult {
             get {
                 return ResourceManager.GetString("Queries_NoResult", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Money earned.
+        /// </summary>
+        internal static string Queries_Profits {
+            get {
+                return ResourceManager.GetString("Queries_Profits", resourceCulture);
             }
         }
         
@@ -1169,11 +1340,146 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage.
+        /// </summary>
+        internal static string Ticket_Carriage {
+            get {
+                return ResourceManager.GetString("Ticket_Carriage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Date.
+        /// </summary>
+        internal static string Ticket_Date {
+            get {
+                return ResourceManager.GetString("Ticket_Date", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Find.
+        /// </summary>
+        internal static string Ticket_Find {
+            get {
+                return ResourceManager.GetString("Ticket_Find", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на From.
+        /// </summary>
+        internal static string Ticket_From {
+            get {
+                return ResourceManager.GetString("Ticket_From", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Input a date.
+        /// </summary>
+        internal static string Ticket_InputDate {
+            get {
+                return ResourceManager.GetString("Ticket_InputDate", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Carriage number must be a number.
+        /// </summary>
+        internal static string Ticket_InputIntCarriage {
+            get {
+                return ResourceManager.GetString("Ticket_InputIntCarriage", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Place number must be a number.
+        /// </summary>
+        internal static string Ticket_InputIntPlace {
+            get {
+                return ResourceManager.GetString("Ticket_InputIntPlace", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Train number must be a number.
+        /// </summary>
+        internal static string Ticket_InputIntTrainID {
+            get {
+                return ResourceManager.GetString("Ticket_InputIntTrainID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Tickets.
+        /// </summary>
+        internal static string Ticket_Name {
+            get {
+                return ResourceManager.GetString("Ticket_Name", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ticket not found.
+        /// </summary>
+        internal static string Ticket_NoTicketFound {
+            get {
+                return ResourceManager.GetString("Ticket_NoTicketFound", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Place.
+        /// </summary>
+        internal static string Ticket_Place {
+            get {
+                return ResourceManager.GetString("Ticket_Place", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Return.
+        /// </summary>
+        internal static string Ticket_Remove {
+            get {
+                return ResourceManager.GetString("Ticket_Remove", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To.
+        /// </summary>
+        internal static string Ticket_To {
+            get {
+                return ResourceManager.GetString("Ticket_To", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Number of train.
+        /// </summary>
+        internal static string Ticket_TrainID {
+            get {
+                return ResourceManager.GetString("Ticket_TrainID", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Sold tickets.
         /// </summary>
         internal static string TICKETS {
             get {
                 return ResourceManager.GetString("TICKETS", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Arrival.
+        /// </summary>
+        internal static string TICKETS_ARRIVAL_TIME {
+            get {
+                return ResourceManager.GetString("TICKETS_ARRIVAL_TIME", resourceCulture);
             }
         }
         
@@ -1187,11 +1493,29 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Departure.
+        /// </summary>
+        internal static string TICKETS_DEPARTURE_TIME {
+            get {
+                return ResourceManager.GetString("TICKETS_DEPARTURE_TIME", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Number of unboarding station.
         /// </summary>
         internal static string TICKETS_FIN_STATION_NUMBER {
             get {
                 return ResourceManager.GetString("TICKETS_FIN_STATION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на To.
+        /// </summary>
+        internal static string TICKETS_FINISH_STATION {
+            get {
+                return ResourceManager.GetString("TICKETS_FINISH_STATION", resourceCulture);
             }
         }
         
@@ -1214,6 +1538,15 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на Price(grn.).
+        /// </summary>
+        internal static string TICKETS_PRICE {
+            get {
+                return ResourceManager.GetString("TICKETS_PRICE", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Race id.
         /// </summary>
         internal static string TICKETS_RACE_ID {
@@ -1223,11 +1556,38 @@ namespace RailwaysDBApp.Properties {
         }
         
         /// <summary>
+        ///   Ищет локализованную строку, похожую на An error occured while deleting the ticket.
+        /// </summary>
+        internal static string Tickets_SomeWrong {
+            get {
+                return ResourceManager.GetString("Tickets_SomeWrong", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на From.
+        /// </summary>
+        internal static string TICKETS_START_STATION {
+            get {
+                return ResourceManager.GetString("TICKETS_START_STATION", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Ищет локализованную строку, похожую на Number of boarding station.
         /// </summary>
         internal static string TICKETS_START_STATION_NUMBER {
             get {
                 return ResourceManager.GetString("TICKETS_START_STATION_NUMBER", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Ticket was deleted succesfully.
+        /// </summary>
+        internal static string Tickets_Success {
+            get {
+                return ResourceManager.GetString("Tickets_Success", resourceCulture);
             }
         }
         
@@ -1328,6 +1688,15 @@ namespace RailwaysDBApp.Properties {
             get {
                 object obj = ResourceManager.GetObject("ukrzaliznytsya", resourceCulture);
                 return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Ищет локализованную строку, похожую на Login.
+        /// </summary>
+        internal static string USERS_LOGIN {
+            get {
+                return ResourceManager.GetString("USERS_LOGIN", resourceCulture);
             }
         }
     }

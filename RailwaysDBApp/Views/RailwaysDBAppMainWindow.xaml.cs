@@ -49,6 +49,8 @@ namespace RailwaysDBApp.Views
                     PermissionManager.Authorized(Convert.ToInt32(permission));
                     App.OpenWindow(WindowsFactory.MainMenu);
                     this.Close();
+                    PermissionManager.USER = login.Text;
+                    LoggingManager.LogAction(2, login.Text);
                 }
                 catch (Exception ex)
                 {

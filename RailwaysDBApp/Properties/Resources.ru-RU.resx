@@ -534,4 +534,127 @@
   <data name="BuyTicket_TrainId" xml:space="preserve">
     <value>Номер поезда</value>
   </data>
+  <data name="ProfitRecord_Amount" xml:space="preserve">
+    <value>Продано билетов</value>
+  </data>
+  <data name="ProfitRecord_Profit" xml:space="preserve">
+    <value>Денег получено(грн.)</value>
+  </data>
+  <data name="Queries_Profits" xml:space="preserve">
+    <value>Получено денег</value>
+  </data>
+  <data name="TICKETS_PRICE" xml:space="preserve">
+    <value>Цена(грн.)</value>
+  </data>
+  <data name="MainMenu_RemoveTicket" xml:space="preserve">
+    <value>Сдать билет</value>
+  </data>
+  <data name="Ticket_Carriage" xml:space="preserve">
+    <value>Вагон</value>
+  </data>
+  <data name="Ticket_Date" xml:space="preserve">
+    <value>Дата</value>
+  </data>
+  <data name="Ticket_Find" xml:space="preserve">
+    <value>Найти</value>
+  </data>
+  <data name="Ticket_From" xml:space="preserve">
+    <value>Откуда</value>
+  </data>
+  <data name="Ticket_Name" xml:space="preserve">
+    <value>Билеты</value>
+  </data>
+  <data name="Ticket_Place" xml:space="preserve">
+    <value>Место</value>
+  </data>
+  <data name="Ticket_Remove" xml:space="preserve">
+    <value>Сдать</value>
+  </data>
+  <data name="Ticket_To" xml:space="preserve">
+    <value>Куда</value>
+  </data>
+  <data name="Ticket_TrainID" xml:space="preserve">
+    <value>Номер поезда</value>
+  </data>
+  <data name="TICKETS_FINISH_STATION" xml:space="preserve">
+    <value>Куда</value>
+  </data>
+  <data name="TICKETS_START_STATION" xml:space="preserve">
+    <value>Откуда</value>
+  </data>
+  <data name="BuyTicket_EalryDate" xml:space="preserve">
+    <value>Слишком ранняя дата</value>
+  </data>
+  <data name="TICKETS_ARRIVAL_TIME" xml:space="preserve">
+    <value>Прибытие</value>
+  </data>
+  <data name="TICKETS_DEPARTURE_TIME" xml:space="preserve">
+    <value>Отправление</value>
+  </data>
+  <data name="Tickets_SomeWrong" xml:space="preserve">
+    <value>Во время удаления билета произошла ошибка</value>
+  </data>
+  <data name="Tickets_Success" xml:space="preserve">
+    <value>Билет успешно удален</value>
+  </data>
+  <data name="Ticket_InputDate" xml:space="preserve">
+    <value>Введите дату</value>
+  </data>
+  <data name="Ticket_InputIntCarriage" xml:space="preserve">
+    <value>Номер вагона должен быть числом</value>
+  </data>
+  <data name="Ticket_InputIntPlace" xml:space="preserve">
+    <value>Номер места должен быть числом</value>
+  </data>
+  <data name="Ticket_InputIntTrainID" xml:space="preserve">
+    <value>Номер поезда должен быть числом</value>
+  </data>
+  <data name="Ticket_NoTicketFound" xml:space="preserve">
+    <value>Билет не найден</value>
+  </data>
+  <data name="LOGGINGACTIONS" xml:space="preserve">
+    <value>Записываемые действия пользователей</value>
+  </data>
+  <data name="LOGGINGTACTIONS_DESCRIPTION" xml:space="preserve">
+    <value>Описание действия</value>
+  </data>
+  <data name="LOGTABLE" xml:space="preserve">
+    <value>Журнал</value>
+  </data>
+  <data name="LOGTABLE_ACTION_ARGUMENT" xml:space="preserve">
+    <value>Над чем производилось действие</value>
+  </data>
+  <data name="LOGTABLE_ACTION_ID" xml:space="preserve">
+    <value>Номер действия в таблице действий</value>
+  </data>
+  <data name="LOGTABLE_USERNAME" xml:space="preserve">
+    <value>Пользователь, совершивший действие</value>
+  </data>
+  <data name="LOGGINGACTIONS_ID" xml:space="preserve">
+    <value>Номер действия</value>
+  </data>
+  <data name="LOGTABLE_ACTION_TIME" xml:space="preserve">
+    <value>Время действия</value>
+  </data>
+  <data name="LOGTABLE_ID" xml:space="preserve">
+    <value>Номер записи</value>
+  </data>
+  <data name="Logging_FinishTime" xml:space="preserve">
+    <value>Конечное время</value>
+  </data>
+  <data name="Logging_Name" xml:space="preserve">
+    <value>Журнал</value>
+  </data>
+  <data name="Logging_Search" xml:space="preserve">
+    <value>Поиск</value>
+  </data>
+  <data name="Logging_StartingTime" xml:space="preserve">
+    <value>Начальное время</value>
+  </data>
+  <data name="MainMenu_Logging" xml:space="preserve">
+    <value>Журнал</value>
+  </data>
+  <data name="USERS_LOGIN" xml:space="preserve">
+    <value>Логин</value>
+  </data>
 </root>

@@ -20,6 +20,9 @@ namespace RailwaysDBApp.Views
     /// </summary>
     public partial class RailwaysDBAppMainMenu : Window
     {
+        private TicketDisplayForm tickets = null;
+        private reportDisplayForm reports = null;
+
         public RailwaysDBAppMainMenu()
         {
             InitializeComponent();
@@ -69,13 +72,34 @@ namespace RailwaysDBApp.Views
 
         private void Reports_Click(object sender, RoutedEventArgs e)
         {
-            reportDisplayForm form = new reportDisplayForm();
-            form.Show();
+            if (reports == null || !reports.Visible)
+            {
+                reports = new reportDisplayForm();
+                reports.Show();
+            }
+            else
+                reports.Focus();
         }
 
         private void BuyTicket_Click(object sender, RoutedEventArgs e)
         {
             App.OpenWindow(WindowsFactory.BuyTicketWindow);
+        }
+
+        private void RemoveTicket_Click(object sender, RoutedEventArgs e)
+        {
+            if (tickets == null || !tickets.Visible)
+            {
+                tickets = new TicketDisplayForm();
+                tickets.Show();
+            }
+            else
+                tickets.Focus();
+        }
+
+        private void Logging_Click(object sender, RoutedEventArgs e)
+        {
+            App.OpenWindow(WindowsFactory.LogWindow);
         }
     }
 }

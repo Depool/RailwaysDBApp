@@ -541,4 +541,127 @@
   <data name="BuyTicket_TrainId" xml:space="preserve">
     <value>Train #</value>
   </data>
+  <data name="ProfitRecord_Amount" xml:space="preserve">
+    <value>Tickets sold</value>
+  </data>
+  <data name="ProfitRecord_Profit" xml:space="preserve">
+    <value>Money earned(grn.)</value>
+  </data>
+  <data name="Queries_Profits" xml:space="preserve">
+    <value>Money earned</value>
+  </data>
+  <data name="TICKETS_PRICE" xml:space="preserve">
+    <value>Price(grn.)</value>
+  </data>
+  <data name="MainMenu_RemoveTicket" xml:space="preserve">
+    <value>Return a ticket</value>
+  </data>
+  <data name="Ticket_Carriage" xml:space="preserve">
+    <value>Carriage</value>
+  </data>
+  <data name="Ticket_Date" xml:space="preserve">
+    <value>Date</value>
+  </data>
+  <data name="Ticket_Find" xml:space="preserve">
+    <value>Find</value>
+  </data>
+  <data name="Ticket_From" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="Ticket_Name" xml:space="preserve">
+    <value>Tickets</value>
+  </data>
+  <data name="Ticket_Place" xml:space="preserve">
+    <value>Place</value>
+  </data>
+  <data name="Ticket_Remove" xml:space="preserve">
+    <value>Return</value>
+  </data>
+  <data name="Ticket_To" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="Ticket_TrainID" xml:space="preserve">
+    <value>Number of train</value>
+  </data>
+  <data name="TICKETS_FINISH_STATION" xml:space="preserve">
+    <value>To</value>
+  </data>
+  <data name="TICKETS_START_STATION" xml:space="preserve">
+    <value>From</value>
+  </data>
+  <data name="BuyTicket_EalryDate" xml:space="preserve">
+    <value>Too late to buy tickets for this date</value>
+  </data>
+  <data name="TICKETS_ARRIVAL_TIME" xml:space="preserve">
+    <value>Arrival</value>
+  </data>
+  <data name="TICKETS_DEPARTURE_TIME" xml:space="preserve">
+    <value>Departure</value>
+  </data>
+  <data name="Tickets_SomeWrong" xml:space="preserve">
+    <value>An error occured while deleting the ticket</value>
+  </data>
+  <data name="Tickets_Success" xml:space="preserve">
+    <value>Ticket was deleted succesfully</value>
+  </data>
+  <data name="Ticket_InputDate" xml:space="preserve">
+    <value>Input a date</value>
+  </data>
+  <data name="Ticket_InputIntCarriage" xml:space="preserve">
+    <value>Carriage number must be a number</value>
+  </data>
+  <data name="Ticket_InputIntPlace" xml:space="preserve">
+    <value>Place number must be a number</value>
+  </data>
+  <data name="Ticket_InputIntTrainID" xml:space="preserve">
+    <value>Train number must be a number</value>
+  </data>
+  <data name="Ticket_NoTicketFound" xml:space="preserve">
+    <value>Ticket not found</value>
+  </data>
+  <data name="LOGGINGACTIONS" xml:space="preserve">
+    <value>Logging actions</value>
+  </data>
+  <data name="LOGGINGACTIONS_DESCRIPTION" xml:space="preserve">
+    <value>Desctription of an action</value>
+  </data>
+  <data name="LOGTABLE" xml:space="preserve">
+    <value>Log</value>
+  </data>
+  <data name="LOGTABLE_ACTION_ARGUMENT" xml:space="preserve">
+    <value>Argument of an action</value>
+  </data>
+  <data name="LOGTABLE_ACTION_ID" xml:space="preserve">
+    <value>Number of action in table of logging actions</value>
+  </data>
+  <data name="LOGTABLE_USERNAME" xml:space="preserve">
+    <value>User commited action</value>
+  </data>
+  <data name="LOGGINGACTIONS_ID" xml:space="preserve">
+    <value>Id of an action</value>
+  </data>
+  <data name="LOGTABLE_ACTION_TIME" xml:space="preserve">
+    <value>Time of the action</value>
+  </data>
+  <data name="LOGTABLE_ID" xml:space="preserve">
+    <value>Number of the record</value>
+  </data>
+  <data name="Logging_FinishTime" xml:space="preserve">
+    <value>Finish time</value>
+  </data>
+  <data name="Logging_Name" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="Logging_Search" xml:space="preserve">
+    <value>Search</value>
+  </data>
+  <data name="Logging_StartingTime" xml:space="preserve">
+    <value>Starting time</value>
+  </data>
+  <data name="MainMenu_Logging" xml:space="preserve">
+    <value>Logging</value>
+  </data>
+  <data name="USERS_LOGIN" xml:space="preserve">
+    <value>Login</value>
+  </data>
 </root>

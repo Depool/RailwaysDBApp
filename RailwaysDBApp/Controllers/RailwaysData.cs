@@ -28,7 +28,7 @@ namespace RailwaysDBApp.Controllers
             if (!filled)
             {
                 List<string> tables = RailwaysDBQueries.GetUserTablesNames();
-
+                
                 foreach (string table in tables)
                 {
                     dynamic d = context.GetType().GetProperty(table).GetValue(context, null);

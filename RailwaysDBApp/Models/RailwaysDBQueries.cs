@@ -4,6 +4,7 @@ using System.Linq;
 using System.Text;
 using RailwaysDBApp.Controllers;
 using RailwaysDAL;
+using System.Data.Objects;
 using System.Windows;
 
 namespace RailwaysDBApp.Models
@@ -99,13 +100,35 @@ namespace RailwaysDBApp.Models
         public string finish { get; set; }
         public short carriageNumber { get; set; }
         public short placeNumber { get; set; }
-                public static List<object> ColumnsMappings()
+        public static List<object> ColumnsMappings()
         {
             return new List<object>(){
                                         TypesConverter.GetResource("TRAINS_START"),
                                         TypesConverter.GetResource("TRAINS_FINISH"),
                                         TypesConverter.GetResource("TICKETS_CARRIAGE_NUMBER"),
                                         TypesConverter.GetResource("TICKETS_PLACE_NUMBER")
+                                     };
+        }
+    }
+
+    internal class ProfitRecord
+    {
+        public int raceID { get; set; }
+        public int trainID { get; set; }
+        public string start { get; set; }
+        public string finish { get; set; }
+        public int ticketsSold { get; set; }
+        public float profit { get; set; }
+
+        public static List<object> ColumnsMappings()
+        {
+            return new List<object>(){
+                                        TypesConverter.GetResource("RACES_ID"),
+                                        TypesConverter.GetResource("TRAINS_ID"),
+                                        TypesConverter.GetResource("TRAINS_START"),
+                                        TypesConverter.GetResource("TRAINS_FINISH"),
+                                        TypesConverter.GetResource("ProfitRecord_Amount"),
+                                        TypesConverter.GetResource("ProfitRecord_Profit")
                                      };
         }
     }
@@ -308,16 +331,18 @@ namespace RailwaysDBApp.Models
                     //будет ровно одна запись в ответе при условии корректности БД
                     try
                     {
-                        r.start = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
+                        r.start = ticket.START_STATION; 
+                        /*context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
                                                                     "from STOPS\n" +
                                                                     "inner join STATIONS\n" +
                                                                     "on STOPS.TRAIN_ID={0} And STOPS.STOP_NUMBER={1}\n" +
-                                                                    "And STOPS.STATION_ID=STATIONS.ID",trainId[0],ticket.START_STATION_NUMBER).ToList()[0];
-                        r.finish = context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
+                                                                    "And STOPS.STATION_ID=STATIONS.ID",trainId[0],ticket.START_STATION_NUMBER).ToList()[0];*/
+                        r.finish = ticket.FINISH_STATION;
+                        /*context.ExecuteStoreQuery<string>("select STATIONS.NAME\n" +
                                                                     "from STOPS\n" +
                                                                     "inner join STATIONS\n" +
                                                                     "on STOPS.TRAIN_ID={0} And STOPS.STOP_NUMBER={1}\n" +
-                                                                    "And STOPS.STATION_ID=STATIONS.ID", trainId[0], ticket.FIN_STATION_NUMBER).ToList()[0];
+                                                                    "And STOPS.STATION_ID=STATIONS.ID", trainId[0], ticket.FIN_STATION_NUMBER).ToList()[0];*/
                         res.Add(r);
                     }
                     catch { }
@@ -402,5 +427,49 @@ namespace RailwaysDBApp.Models
         }
 
 
+        //comparer
+        private static int profitRecordComparer(ProfitRecord a, ProfitRecord b)
+        {
+            return a.raceID - b.raceID;
+        }
+
+        public static List<ProfitRecord> GetProfits()
+        {
+            RailwaysEntities context = RailwaysData.sharedContext;
+            Dictionary<int, ProfitRecord> groups = new Dictionary<int, ProfitRecord>();
+            List<TICKET> tickets = context.TICKETS.ToList();
+            foreach (TICKET ticket in tickets)
+            {
+                int? id = ticket.RACE_ID;
+                if (!groups.ContainsKey((int)id))
+                {
+                    ProfitRecord record = new ProfitRecord();
+                    TrainDestinations dest = GetOneTrainDestination((int)ticket.RACE.TRAIN_ID);
+
+                    record.raceID = (int)id;
+                    record.trainID = (int)dest.ID;
+                    record.start = dest.start;
+                    record.finish = dest.finish;
+                    if (ticket.RACE.FORWARD == 1)
+                    {
+                        string x = record.start;
+                        record.start = record.finish;
+                        record.finish = x;
+                    }
+                    record.ticketsSold = 0; record.profit = 0;
+                    groups.Add((int)id, record);
+                }
+
+                ProfitRecord profRec = groups[(int)ticket.RACE_ID];
+                profRec.profit += (float)ticket.PRICE;
+                profRec.ticketsSold++;
+
+                context.SaveChanges();
+            }
+
+            List<ProfitRecord> res = groups.Values.ToList();
+            res.Sort(profitRecordComparer);
+            return res;
+        }
     }
 }

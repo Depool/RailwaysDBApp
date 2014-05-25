@@ -18,7 +18,7 @@ namespace RailwaysDBApp.Views
         private static RailwaysDBAppQueriesWindow queriesWindow = null;
         private static RailwaysDBAppAddTrainWindow addTrainWindow = null;
         private static RailwaysDBAppBuyTicketWindow buyTicketWindow = null;
-        
+        private static RailwaysDBAppLogWindow logWindow = null;
 
         //static properties
         public static RailwaysDBAppMainMenu MainMenu
@@ -161,6 +161,23 @@ namespace RailwaysDBApp.Views
                     windows.Add(buyTicketWindow);
                 }
                 return buyTicketWindow;
+            }
+        }
+
+        public static RailwaysDBAppLogWindow LogWindow
+        {
+            get
+            {
+                if (logWindow == null || !logWindow.IsVisible)
+                {
+                    if (logWindow != null)
+                    {
+                        windows.Remove(logWindow);
+                    }
+                    logWindow = new RailwaysDBAppLogWindow();
+                    windows.Add(logWindow);
+                }
+                return logWindow;
             }
         }
 
